@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Header pokemons={pokemons} />
+      <Header pokemons={pokemons} setPokemons={setPokemons} />
       {isLoading ? <Loader /> : <Cards pokemons={pokemons} />}
     </>
   );

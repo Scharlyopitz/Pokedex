@@ -1,0 +1,20 @@
+[
+  { "type": "Normal", "color": "#ccc8ba" },
+  { "type": "Plante", "color": "#6fe457" },
+  { "type": "Vol", "color": "#b8cbfe" },
+  { "type": "Feu", "color": "#fe8158" },
+  { "type": "Combat", "color": "#ff8100" },
+  { "type": "Poison", "color": "#d26cfe" },
+  { "type": "Sol", "color": "#e9bd9c" },
+  { "type": "Insecte", "color": "#b9f06d" },
+  { "type": "Roche", "color": "#c8a996" },
+  { "type": "Spectre", "color": "#ac84dc" },
+  { "type": "Acier", "color": "#d7d7d7" },
+  { "type": "Eau", "color": "#43a8fd" },
+  { "type": "Électrik", "color": "#fef32c" },
+  { "type": "Psy", "color": "#fe92ca" },
+  { "type": "Glace", "color": "#3dd9ff" },
+  { "type": "Dragon", "color": "#4f60e2" },
+  { "type": "Ténèbres", "color": "#50413f" },
+  { "type": "Fée", "color": "#ffaaff" }
+]

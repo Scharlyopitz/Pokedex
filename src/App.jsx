@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "./assets/components/Card";
 import Loader from "./assets/components/Loader";
+import Types from "./assets/Types/Types.json";
 
 function App() {
   const URL = "https://tyradex.vercel.app/api/v1/pokemon";
@@ -35,6 +36,8 @@ function App() {
                 name={pokemon.name.fr}
                 category={pokemon.category}
                 image={pokemon.sprites.regular}
+                type={pokemon.types[0].name}
+                Types={Types}
               />
             );
           })}

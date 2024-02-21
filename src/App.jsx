@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Card from "./assets/components/Card";
 import Loader from "./assets/components/Loader";
 import Cards from "./assets/components/Cards";
+import Header from "./assets/components/Header";
 
 function App() {
   const URL = "https://tyradex.vercel.app/api/v1/pokemon";
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <h1>Pokedex</h1>
+      <Header />
       {isLoading ? <Loader /> : <Cards pokemons={pokemons} />}
     </>
   );

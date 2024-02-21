@@ -7,7 +7,7 @@ export default function Header() {
       <div className="btn-container">
         {allTypes.map((type, idx) => {
           return (
-            <button style={{ background: `${type.color}` }} key={idx}>
+            <button style={{ border: `2px solid ${type.color}` }} key={idx}>
               {type.type}
             </button>
           );

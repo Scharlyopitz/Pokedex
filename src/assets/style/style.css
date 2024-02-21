@@ -7,6 +7,7 @@
 body {
   background-color: #34495e;
   text-align: center;
+  color: #ffffff;
 }
 
 .cards_container {
@@ -19,6 +20,7 @@ body {
   padding: 10px;
   width: 300px;
   margin: 50px;
+  background: #2c3e50;
 }
 .cards_container .card:hover {
   cursor: pointer;
@@ -31,14 +33,16 @@ body {
 }
 
 header {
-  margin: 20px;
+  width: 80%;
+  margin: 50px auto;
 }
 header button {
-  padding: 15px;
+  padding: 15px 25px;
   border-radius: 30px;
-  border: 2px Solid #000000;
   margin: 5px;
   font-size: 20px;
+  color: #ffffff;
+  background: #2c3e50;
 }
 header button:hover {
   cursor: pointer;

@@ -1,11 +1,14 @@
 header {
-  margin: 20px;
+  width: 80%;
+  margin: 50px auto;
+
   button {
-    padding: 15px;
+    padding: 15px 25px;
     border-radius: 30px;
-    border: 2px Solid $Black;
     margin: 5px;
     font-size: 20px;
+    color: $White;
+    background: $BackgroundBis;
 
     &:hover {
       cursor: pointer;

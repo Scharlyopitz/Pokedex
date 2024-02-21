@@ -46,4 +46,7 @@ header button {
 }
 header button:hover {
   cursor: pointer;
+}
+header .typeColor {
+  background: #1d2732;
 }/*# sourceMappingURL=style.css.map */

@@ -29,7 +29,14 @@ function App() {
       ) : (
         <div className="cards_container">
           {pokemons.map((pokemon, idx) => {
-            return <Card key={idx} name={pokemon.name.fr} />;
+            return (
+              <Card
+                key={idx}
+                name={pokemon.name.fr}
+                category={pokemon.category}
+                image={pokemon.sprites.regular}
+              />
+            );
           })}
         </div>
       )}

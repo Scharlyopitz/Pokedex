@@ -2,21 +2,34 @@ import { useState, useEffect } from "react";
 import Card from "./assets/components/Card";
 
 function App() {
-  const [pokemon, setPokemon] = useState([]);
-  console.log(pokemon);
+  const URL = "https://tyradex.vercel.app/api/v1/pokemon/pikachu";
 
-  URL = "https://tyradex.vercel.app/api/v1/pokemon/pikachu";
-
-  useEffect(() => {
+  async function getPokemon() {
     fetch(URL)
       .then((response) => response.json())
-      .then((res) => setPokemon(res));
-  }, [URL]);
+      .then((data) => {
+        setPokemon(data);
+        setIsLoading(false);
+      });
+  }
+
+  const [pokemon, setPokemon] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    getPokemon();
+  }, []);
 
   return (
     <>
-      <h1>Pokemon</h1>
-      {/* <Card pokemon={pokemon} /> */}
+      <h1>Pokedex</h1>
+      {isLoading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <>
+          <Card pokemon={pokemon} />
+        </>
+      )}
     </>
   );
 }

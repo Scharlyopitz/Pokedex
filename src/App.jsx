@@ -27,11 +27,11 @@ function App() {
       {isLoading ? (
         <Loader />
       ) : (
-        <>
+        <div className="cards_container">
           {pokemons.map((pokemon, idx) => {
             return <Card key={idx} name={pokemon.name.fr} />;
           })}
-        </>
+        </div>
       )}
     </>
   );

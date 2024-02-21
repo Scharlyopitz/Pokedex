@@ -17,5 +17,6 @@ body {
 .cards_container .card {
   width: 200px;
   height: 300px;
+  background-color: #2600ff;
   margin: 10px;
 }/*# sourceMappingURL=style.css.map */

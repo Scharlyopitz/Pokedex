@@ -9,7 +9,7 @@ function App() {
     fetch(URL)
       .then((response) => response.json())
       .then((data) => {
-        setPokemons(data);
+        setPokemons(data.filter((poke) => poke.pokedexId > 0));
         setIsLoading(false);
       });
   }

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
+import allTypes from "../Types/Types.json";
 
-export default function Card({ name, category, image, type, Types }) {
+export default function Card({ name, category, image, type }) {
   const [color, setColor] = useState();
-  useEffect(() => {
-    Types.map((Ty) => type === `${Ty.type}` && setColor(`${Ty.color}`));
-  });
 
-  // const color = type === `${Types.type}` && `${Types.color}`;
+  useEffect(() => {
+    allTypes.map((t) => type === `${t.type}` && setColor(`${t.color}`));
+  }, []);
 
   return (
     <div className="card" style={{ background: `${color}` }}>

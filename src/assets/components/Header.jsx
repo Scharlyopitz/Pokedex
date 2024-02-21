@@ -1,11 +1,14 @@
 import { useState } from "react";
 import allTypes from "../Types/Types.json";
 
-export default function Header() {
+export default function Header({ pokemons }) {
   const [isActive, setIsActive] = useState("");
 
   const filterPokemons = (e) => {
     setIsActive(e.target.dataset.type);
+    pokemons.filter((pokemon) =>
+      console.log(pokemon.types[0].name === isActive)
+    );
   };
 
   return (

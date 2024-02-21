@@ -1,7 +1,7 @@
-export default function Card({ pokemon }) {
+export default function Card({ name }) {
   return (
     <>
-      <h1>{pokemon.name.fr}</h1>
+      <h1>{name}</h1>
     </>
   );
 }

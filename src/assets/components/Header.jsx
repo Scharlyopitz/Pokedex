@@ -1,7 +1,6 @@
 import allTypes from "../Types/Types.json";
 
 export default function Header() {
-  //   console.log(allTypes);
   return (
     <header>
       <h1>Pokedex</h1>

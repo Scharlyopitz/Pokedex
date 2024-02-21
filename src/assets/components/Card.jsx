@@ -9,7 +9,7 @@ export default function Card({ name, category, image, type }) {
   }, []);
 
   return (
-    <div className="card" style={{ background: `${color}` }}>
+    <div className="card" style={{ border: `3px solid ${color}` }}>
       <img src={image} alt={name} />
       <p>{category}</p>
       <h1>{name}</h1>

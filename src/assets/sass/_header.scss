@@ -1,0 +1,14 @@
+header {
+  margin: 20px;
+  button {
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px Solid $Black;
+    margin: 5px;
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

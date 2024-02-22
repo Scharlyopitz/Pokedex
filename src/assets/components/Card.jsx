@@ -10,7 +10,7 @@ export default function Card({ id, name, image, type }) {
 
   useEffect(() => {
     callColor();
-  }, []);
+  }, [type]);
 
   return (
     <div className="card" style={{ border: `3px solid ${color}` }}>

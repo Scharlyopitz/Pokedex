@@ -44,7 +44,7 @@ export default function FilterButtons({
             onClick={(e) => {
               getPokemonType(e);
             }}
-            style={{ border: `2px solid ${type.color}` }}
+            style={{ border: `2px solid ${type.color.border}` }}
             key={idx}
           >
             {type.type}

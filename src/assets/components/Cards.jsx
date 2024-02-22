@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-export default function Cards({ pokemons, searchPokemon }) {
+export default function Cards({ pokemons, searchPokemon, pokemonCategory }) {
   return (
     <div className="cards_container">
       {pokemons

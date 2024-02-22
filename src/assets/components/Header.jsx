@@ -6,6 +6,7 @@ export default function Header({
   getAllPokemons,
   setIsLoading,
   setSearchPokemon,
+  setPokemonCategory,
 }) {
   return (
     <header>
@@ -20,6 +21,7 @@ export default function Header({
         setPokemons={setPokemons}
         getAllPokemons={getAllPokemons}
         setIsLoading={setIsLoading}
+        setPokemonCategory={setPokemonCategory}
       />
     </header>
   );

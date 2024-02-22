@@ -1,37 +1,12 @@
 import allTypes from "../Types/Types.json";
 import { useState } from "react";
 
-export default function FilterButtons({
-  pokemons,
-  setPokemons,
-  getAllPokemons,
-  setIsLoading,
-  setPokemonCategory,
-}) {
+export default function FilterButtons({ setPokemonCategory }) {
   const [isActive, setIsActive] = useState("");
-  const [cliked, setCliked] = useState(true);
-
-  //   const filterPokemons = (e) => {
-  //     setCliked(false);
-  //     setIsActive(e.target.dataset.type);
-  //     setPokemonCategory(e.target.dataset.type);
-
-  //     setPokemons(
-  //       pokemons.filter(
-  //         (pokemon) => pokemon.types[0].name === e.target.dataset.type
-  //       )
-  //     );
-  //   };
-
-  //   const allPokemons = () => {
-  //     setCliked(true);
-  //     setIsActive();
-  //     setIsLoading(true);
-  //     getAllPokemons();
-  //   };
 
   const getPokemonType = (e) => {
     setPokemonCategory(e.target.dataset.type);
+    setIsActive(e.target.dataset.type);
   };
 
   return (
@@ -56,7 +31,7 @@ export default function FilterButtons({
         onClick={(e) => {
           getPokemonType(e);
         }}
-        className={`Tout ${cliked && "Active"}`}
+        className={`Tout ${isActive === `All` ? "Active" : null}`}
       >
         Tout
       </button>

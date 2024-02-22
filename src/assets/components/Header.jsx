@@ -1,13 +1,6 @@
 import FilterButtons from "./FilterButtons";
 
-export default function Header({
-  pokemons,
-  setPokemons,
-  getAllPokemons,
-  setIsLoading,
-  setSearchPokemon,
-  setPokemonCategory,
-}) {
+export default function Header({ setSearchPokemon, setPokemonCategory }) {
   return (
     <header>
       <h1>Pokedex</h1>
@@ -16,13 +9,7 @@ export default function Header({
         placeholder="Recherche un Pokemon"
         onChange={(e) => setSearchPokemon(e.target.value.toLocaleLowerCase())}
       />
-      <FilterButtons
-        pokemons={pokemons}
-        setPokemons={setPokemons}
-        getAllPokemons={getAllPokemons}
-        setIsLoading={setIsLoading}
-        setPokemonCategory={setPokemonCategory}
-      />
+      <FilterButtons setPokemonCategory={setPokemonCategory} />
     </header>
   );
 }

@@ -27,10 +27,6 @@ function App() {
   return (
     <>
       <Header
-        pokemons={pokemons}
-        setPokemons={setPokemons}
-        getAllPokemons={getAllPokemons}
-        setIsLoading={setIsLoading}
         setSearchPokemon={setSearchPokemon}
         setPokemonCategory={setPokemonCategory}
       />

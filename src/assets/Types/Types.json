@@ -1,20 +1,92 @@
 [
-  { "type": "Normal", "color": "#ccc8ba" },
-  { "type": "Plante", "color": "#6fe457" },
-  { "type": "Vol", "color": "#b8cbfe" },
-  { "type": "Feu", "color": "#fe8158" },
-  { "type": "Combat", "color": "#ff8100" },
-  { "type": "Poison", "color": "#d26cfe" },
-  { "type": "Sol", "color": "#e9bd9c" },
-  { "type": "Insecte", "color": "#b9f06d" },
-  { "type": "Roche", "color": "#c8a996" },
-  { "type": "Spectre", "color": "#ac84dc" },
-  { "type": "Acier", "color": "#d7d7d7" },
-  { "type": "Eau", "color": "#43a8fd" },
-  { "type": "Électrik", "color": "#fef32c" },
-  { "type": "Psy", "color": "#fe92ca" },
-  { "type": "Glace", "color": "#3dd9ff" },
-  { "type": "Dragon", "color": "#4f60e2" },
-  { "type": "Ténèbres", "color": "#606060" },
-  { "type": "Fée", "color": "#ffaaff" }
+  {
+    "type": "Normal",
+    "color": "rgb(204 200 186)",
+    "background": "rgb(204 200 186 / 10%)"
+  },
+  {
+    "type": "Plante",
+    "color": "rgb(111 228 87 )",
+    "background": "rgb(111 228 87 / 10%)"
+  },
+  {
+    "type": "Vol",
+    "color": "rgb(184 203 254 )",
+    "background": "rgb(184 203 254 / 10%)"
+  },
+  {
+    "type": "Feu",
+    "color": "rgb(254 129 88 )",
+    "background": "rgb(254 129 88 / 10%)"
+  },
+  {
+    "type": "Combat",
+    "color": "rgb(255 129 0 )",
+    "background": "rgb(255 129 0 / 10%)"
+  },
+  {
+    "type": "Poison",
+    "color": "rgb(210 108 254 )",
+    "background": "rgb(210 108 254 / 10%)"
+  },
+  {
+    "type": "Sol",
+    "color": "rgb(233 189 156 )",
+    "background": "rgb(233 189 156 / 10%)"
+  },
+  {
+    "type": "Insecte",
+    "color": "rgb(185 240 109 )",
+    "background": "rgb(185 240 109 / 10%)"
+  },
+  {
+    "type": "Roche",
+    "color": "rgb(200 169 150 )",
+    "background": "rgb(200 169 150 / 10%)"
+  },
+  {
+    "type": "Spectre",
+    "color": "rgb(172 132 220 )",
+    "background": "rgb(172 132 220 / 10%)"
+  },
+  {
+    "type": "Acier",
+    "color": "rgb(215 215 215 )",
+    "background": "rgb(215 215 215 / 10%)"
+  },
+  {
+    "type": "Eau",
+    "color": "rgb(67 168 253 )",
+    "background": "rgb(67 168 253 / 10%)"
+  },
+  {
+    "type": "Électrik",
+    "color": "rgb(254 243 44 )",
+    "background": "rgb(254 243 44 / 10%)"
+  },
+  {
+    "type": "Psy",
+    "color": "rgb(254 146 202 )",
+    "background": "rgb(254 146 202 / 10%)"
+  },
+  {
+    "type": "Glace",
+    "color": "rgb(61 217 255 )",
+    "background": "rgb(61 217 255 / 10%)"
+  },
+  {
+    "type": "Dragon",
+    "color": "rgb(79 96 226 )",
+    "background": "rgb(79 96 226 / 10%)"
+  },
+  {
+    "type": "Ténèbres",
+    "color": "rgb(96 96 96 )",
+    "background": "rgb(96 96 96 / 10%)"
+  },
+  {
+    "type": "Fée",
+    "color": "rgb(255 170 255 )",
+    "background": "rgb(255 170 255 / 10%)"
+  }
 ]

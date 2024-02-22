@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import allTypes from "../Types/Types.json";
 
 export default function Card({ id, name, image, type }) {
-  const [color, setColor] = useState();
-  console.log(color);
+  const [color, setColor] = useState([]);
 
   const callColor = () => {
-    allTypes.map((t) => type === `${t.type}` && setColor(`${t.color}`));
+    allTypes.map(
+      (t) => type === `${t.type}` && setColor([`${t.color}`, `${t.background}`])
+    );
   };
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function Card({ id, name, image, type }) {
   return (
     <div
       className="card"
-      style={{ border: `3px solid ${color}`, background: `` }}
+      style={{ border: `3px solid ${color[0]}`, background: `${color[1]}` }}
     >
       <h1>#{id}</h1>
       <h1>{name}</h1>

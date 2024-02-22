@@ -5,7 +5,10 @@ export default function Cards({ pokemons, searchPokemon, pokemonCategory }) {
     <div className="cards_container">
       {pokemons
         .filter((value) => {
-          return value.name.fr.toLowerCase().includes(searchPokemon);
+          return pokemonCategory === "All"
+            ? value.name.fr.toLowerCase().includes(searchPokemon)
+            : value.name.fr.toLowerCase().includes(searchPokemon) &&
+                value.types[0].name === pokemonCategory;
         })
         .map((value, idx) => {
           return (

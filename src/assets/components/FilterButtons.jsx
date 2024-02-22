@@ -52,6 +52,7 @@ export default function FilterButtons({
         );
       })}
       <button
+        data-type="All"
         onClick={(e) => {
           getPokemonType(e);
         }}

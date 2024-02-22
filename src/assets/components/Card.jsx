@@ -3,11 +3,10 @@ import allTypes from "../Types/Types.json";
 
 export default function Card({ id, name, image, type }) {
   const [color, setColor] = useState([]);
+  console.log(color);
 
   const callColor = () => {
-    allTypes.map(
-      (t) => type === `${t.type}` && setColor([`${t.color}`, `${t.background}`])
-    );
+    allTypes.map((t) => type === `${t.type}` && setColor(t.color));
   };
 
   useEffect(() => {

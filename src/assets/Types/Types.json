@@ -1,92 +1,125 @@
 [
   {
     "type": "Normal",
-    "color": "rgb(204 200 186)",
-    "background": "rgb(204 200 186 / 10%)"
+    "color": {
+      "border": "rgb(204 200 186)",
+      "background": "rgb(204 200 186 / 10%)"
+    }
   },
   {
     "type": "Plante",
-    "color": "rgb(111 228 87 )",
-    "background": "rgb(111 228 87 / 10%)"
+    "color": {
+      "border": "rgb(111 228 87 )",
+      "background": "rgb(111 228 87 / 10%)"
+    }
   },
   {
     "type": "Vol",
-    "color": "rgb(184 203 254 )",
-    "background": "rgb(184 203 254 / 10%)"
+    "color": {
+      "border": "rgb(184 203 254 )",
+      "background": "rgb(184 203 254 / 10%)"
+    }
   },
   {
     "type": "Feu",
-    "color": "rgb(254 129 88 )",
-    "background": "rgb(254 129 88 / 10%)"
+    "color": {
+      "border": "rgb(254 129 88 )",
+      "background": "rgb(254 129 88 / 10%)"
+    }
   },
   {
     "type": "Combat",
-    "color": "rgb(255 129 0 )",
-    "background": "rgb(255 129 0 / 10%)"
+    "color": {
+      "border": "rgb(255 129 0 )",
+      "background": "rgb(255 129 0 / 10%)"
+    }
   },
   {
     "type": "Poison",
-    "color": "rgb(210 108 254 )",
-    "background": "rgb(210 108 254 / 10%)"
+    "color": {
+      "border": "rgb(210 108 254 )",
+      "background": "rgb(210 108 254 / 10%)"
+    }
   },
   {
     "type": "Sol",
-    "color": "rgb(233 189 156 )",
-    "background": "rgb(233 189 156 / 10%)"
+    "color": {
+      "border": "rgb(233 189 156 )",
+      "background": "rgb(233 189 156 / 10%)"
+    }
   },
   {
     "type": "Insecte",
-    "color": "rgb(185 240 109 )",
-    "background": "rgb(185 240 109 / 10%)"
+    "color": {
+      "border": "rgb(185 240 109 )",
+      "background": "rgb(185 240 109 / 10%)"
+    }
   },
   {
     "type": "Roche",
-    "color": "rgb(200 169 150 )",
-    "background": "rgb(200 169 150 / 10%)"
+    "color": {
+      "border": "rgb(200 169 150 )",
+      "background": "rgb(200 169 150 / 10%)"
+    }
   },
   {
     "type": "Spectre",
-    "color": "rgb(172 132 220 )",
-    "background": "rgb(172 132 220 / 10%)"
+    "color": {
+      "border": "rgb(172 132 220 )",
+      "background": "rgb(172 132 220 / 10%)"
+    }
   },
   {
     "type": "Acier",
-    "color": "rgb(215 215 215 )",
-    "background": "rgb(215 215 215 / 10%)"
+    "color": {
+      "border": "rgb(215 215 215 )",
+      "background": "rgb(215 215 215 / 10%)"
+    }
   },
   {
     "type": "Eau",
-    "color": "rgb(67 168 253 )",
-    "background": "rgb(67 168 253 / 10%)"
+    "color": {
+      "border": "rgb(67 168 253 )",
+      "background": "rgb(67 168 253 / 10%)"
+    }
   },
   {
     "type": "Électrik",
-    "color": "rgb(254 243 44 )",
-    "background": "rgb(254 243 44 / 10%)"
+    "color": {
+      "border": "rgb(254 243 44 )",
+      "background": "rgb(254 243 44 / 10%)"
+    }
   },
   {
     "type": "Psy",
-    "color": "rgb(254 146 202 )",
-    "background": "rgb(254 146 202 / 10%)"
+    "color": {
+      "border": "rgb(254 146 202 )",
+      "background": "rgb(254 146 202 / 10%)"
+    }
   },
   {
     "type": "Glace",
-    "color": "rgb(61 217 255 )",
-    "background": "rgb(61 217 255 / 10%)"
+    "color": {
+      "border": "rgb(61 217 255 )",
+      "background": "rgb(61 217 255 / 10%)"
+    }
   },
   {
     "type": "Dragon",
-    "color": "rgb(79 96 226 )",
-    "background": "rgb(79 96 226 / 10%)"
+    "color": {
+      "border": "rgb(79 96 226 )",
+      "background": "rgb(79 96 226 / 10%)"
+    }
   },
   {
     "type": "Ténèbres",
-    "color": "rgb(96 96 96 )",
-    "background": "rgb(96 96 96 / 10%)"
+    "color": { "border": "rgb(96 96 96 )", "background": "rgb(96 96 96 / 10%)" }
   },
   {
     "type": "Fée",
-    "color": "rgb(255 170 255 )",
-    "background": "rgb(255 170 255 / 10%)"
+    "color": {
+      "border": "rgb(255 170 255 )",
+      "background": "rgb(255 170 255 / 10%)"
+    }
   }
 ]

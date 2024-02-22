@@ -1,19 +1,23 @@
 import Card from "./Card";
 
-export default function Cards({ pokemons }) {
+export default function Cards({ pokemons, searchPokemon }) {
   return (
     <div className="cards_container">
-      {pokemons.map((pokemon, idx) => {
-        return (
-          <Card
-            key={idx}
-            id={pokemon.pokedexId}
-            name={pokemon.name.fr}
-            image={pokemon.sprites.regular}
-            type={pokemon.types[0].name}
-          />
-        );
-      })}
+      {pokemons
+        .filter((value) => {
+          return value.name.fr.toLowerCase().includes(searchPokemon);
+        })
+        .map((value, idx) => {
+          return (
+            <Card
+              key={idx}
+              id={value.pokedexId}
+              name={value.name.fr}
+              image={value.sprites.regular}
+              type={value.types[0].name}
+            />
+          );
+        })}
     </div>
   );
 }

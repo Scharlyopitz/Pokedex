@@ -20,6 +20,7 @@ function App() {
   }, []);
 
   const [pokemons, setPokemons] = useState([]);
+  const [searchPokemon, setSearchPokemon] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   return (
@@ -29,8 +30,13 @@ function App() {
         setPokemons={setPokemons}
         getAllPokemons={getAllPokemons}
         setIsLoading={setIsLoading}
+        setSearchPokemon={setSearchPokemon}
       />
-      {isLoading ? <Loader /> : <Cards pokemons={pokemons} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Cards pokemons={pokemons} searchPokemon={searchPokemon} />
+      )}
     </>
   );
 }

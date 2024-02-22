@@ -6,6 +6,7 @@ export default function Header({
   setPokemons,
   getAllPokemons,
   setIsLoading,
+  setSearchPokemon,
 }) {
   const [isActive, setIsActive] = useState("");
   const [cliked, setCliked] = useState(true);
@@ -28,23 +29,13 @@ export default function Header({
     getAllPokemons();
   };
 
-  const onChangeFilter = (e) => {
-    setPokemons(
-      pokemons.filter((pokemon) => {
-        return e.target.value.toLowerCase() === ""
-          ? getAllPokemons()
-          : pokemon.name.fr.toLowerCase().includes(e.target.value);
-      })
-    );
-  };
-
   return (
     <header>
       <h1>Pokedex</h1>
       <input
         type="text"
         placeholder="Recherche un Pokemon"
-        onChange={(e) => onChangeFilter(e)}
+        onChange={(e) => setSearchPokemon(e.target.value.toLocaleLowerCase())}
       />
 
       <div className="btn-container">

@@ -6,7 +6,7 @@ import Header from "./assets/components/Header";
 function App() {
   const URL = "https://tyradex.vercel.app/api/v1/pokemon";
 
-  async function getPokemons() {
+  async function getAllPokemons() {
     fetch(URL)
       .then((response) => response.json())
       .then((data) => {
@@ -16,7 +16,7 @@ function App() {
   }
 
   useEffect(() => {
-    getPokemons();
+    getAllPokemons();
   }, []);
 
   const [pokemons, setPokemons] = useState([]);
@@ -24,7 +24,11 @@ function App() {
 
   return (
     <>
-      <Header pokemons={pokemons} setPokemons={setPokemons} />
+      <Header
+        pokemons={pokemons}
+        setPokemons={setPokemons}
+        getAllPokemons={getAllPokemons}
+      />
       {isLoading ? <Loader /> : <Cards pokemons={pokemons} />}
     </>
   );

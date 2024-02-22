@@ -12,6 +12,7 @@ header {
 
     &:hover {
       cursor: pointer;
+      background: $Active;
     }
   }
   .Tout {
@@ -19,6 +20,6 @@ header {
   }
 
   .Active {
-    background: #1d2732;
+    background: $Active;
   }
 }

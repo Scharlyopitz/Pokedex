@@ -1,10 +1,12 @@
 import { useState } from "react";
 import allTypes from "../Types/Types.json";
 
-export default function Header({ pokemons, setPokemons }) {
+export default function Header({ pokemons, setPokemons, getAllPokemons }) {
   const [isActive, setIsActive] = useState("");
+  const [cliked, setCliked] = useState(true);
 
   const filterPokemons = (e) => {
+    setCliked(false);
     setIsActive(e.target.dataset.type);
 
     setPokemons(
@@ -12,6 +14,12 @@ export default function Header({ pokemons, setPokemons }) {
         (pokemon) => pokemon.types[0].name === e.target.dataset.type
       )
     );
+  };
+
+  const allPokemons = () => {
+    setCliked(true);
+    setIsActive();
+    getAllPokemons();
   };
 
   return (
@@ -34,7 +42,12 @@ export default function Header({ pokemons, setPokemons }) {
             </button>
           );
         })}
-        <button className="Tout">Tout</button>
+        <button
+          onClick={allPokemons}
+          className={`Tout ${cliked ? "Active" : null}`}
+        >
+          Tout
+        </button>
       </div>
     </header>
   );

@@ -46,6 +46,7 @@ header button {
 }
 header button:hover {
   cursor: pointer;
+  background: #1d2732;
 }
 header .Tout {
   border: 2px solid #000000;

@@ -28,6 +28,7 @@ function App() {
         pokemons={pokemons}
         setPokemons={setPokemons}
         getAllPokemons={getAllPokemons}
+        setIsLoading={setIsLoading}
       />
       {isLoading ? <Loader /> : <Cards pokemons={pokemons} />}
     </>

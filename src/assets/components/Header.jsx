@@ -1,7 +1,12 @@
 import { useState } from "react";
 import allTypes from "../Types/Types.json";
 
-export default function Header({ pokemons, setPokemons, getAllPokemons }) {
+export default function Header({
+  pokemons,
+  setPokemons,
+  getAllPokemons,
+  setIsLoading,
+}) {
   const [isActive, setIsActive] = useState("");
   const [cliked, setCliked] = useState(true);
 
@@ -19,6 +24,7 @@ export default function Header({ pokemons, setPokemons, getAllPokemons }) {
   const allPokemons = () => {
     setCliked(true);
     setIsActive();
+    setIsLoading(true);
     getAllPokemons();
   };
 

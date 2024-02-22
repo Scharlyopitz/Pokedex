@@ -43,6 +43,12 @@ header input {
   color: #ffffff;
   outline: none;
 }
+header input::-moz-placeholder {
+  font-size: 12px;
+}
+header input::placeholder {
+  font-size: 12px;
+}
 header button {
   padding: 15px 25px;
   border-radius: 30px;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import allTypes from "../Types/Types.json";
 
-export default function Card({ name, category, image, type }) {
+export default function Card({ id, name, image, type }) {
   const [color, setColor] = useState();
 
   useEffect(() => {
@@ -10,8 +10,9 @@ export default function Card({ name, category, image, type }) {
 
   return (
     <div className="card" style={{ border: `3px solid ${color}` }}>
+      <h1>#{id}</h1>
       <img src={image} alt={name} />
-      <p>{category}</p>
+      <p>Type : {type}</p>
       <h1>{name}</h1>
     </div>
   );

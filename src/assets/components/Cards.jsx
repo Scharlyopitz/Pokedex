@@ -7,8 +7,8 @@ export default function Cards({ pokemons }) {
         return (
           <Card
             key={idx}
+            id={pokemon.pokedexId}
             name={pokemon.name.fr}
-            category={pokemon.category}
             image={pokemon.sprites.regular}
             type={pokemon.types[0].name}
           />

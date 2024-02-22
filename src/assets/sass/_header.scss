@@ -2,6 +2,19 @@ header {
   width: 80%;
   margin: 50px auto;
 
+  input {
+    background: no-repeat;
+    border: 2px solid $Black;
+    border-radius: 20px;
+    padding: 10px;
+    color: $White;
+    outline: none;
+
+    // &:focus {
+    //   border: 3px solid $Black;
+    // }
+  }
+
   button {
     padding: 15px 25px;
     border-radius: 30px;
@@ -9,6 +22,7 @@ header {
     font-size: 20px;
     color: $White;
     background: $BackgroundBis;
+    transition: 0.2s;
 
     &:hover {
       cursor: pointer;

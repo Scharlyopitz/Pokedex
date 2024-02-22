@@ -35,6 +35,14 @@ header {
   width: 80%;
   margin: 50px auto;
 }
+header input {
+  background: no-repeat;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 10px;
+  color: #ffffff;
+  outline: none;
+}
 header button {
   padding: 15px 25px;
   border-radius: 30px;
@@ -42,6 +50,7 @@ header button {
   font-size: 20px;
   color: #ffffff;
   background: #2c3e50;
+  transition: 0.2s;
 }
 header button:hover {
   cursor: pointer;

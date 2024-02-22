@@ -31,7 +31,7 @@ export default function Header({
   const onChangeFilter = (e) => {
     setPokemons(
       pokemons.filter((pokemon) => {
-        return e.target.value === ""
+        return e.target.value.toLowerCase() === ""
           ? getAllPokemons()
           : pokemon.name.fr.toLowerCase().includes(e.target.value);
       })

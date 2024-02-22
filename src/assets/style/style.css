@@ -36,9 +36,6 @@ header {
   width: 80%;
   margin: 50px auto;
 }
-header input {
-  text-transform: lowercase;
-}
 header button {
   padding: 15px 25px;
   border-radius: 30px;

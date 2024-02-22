@@ -1,5 +1,4 @@
-import { useState } from "react";
-import allTypes from "../Types/Types.json";
+import FilterButtons from "./FilterButtons";
 
 export default function Header({
   pokemons,
@@ -8,27 +7,6 @@ export default function Header({
   setIsLoading,
   setSearchPokemon,
 }) {
-  const [isActive, setIsActive] = useState("");
-  const [cliked, setCliked] = useState(true);
-
-  const filterPokemons = (e) => {
-    setCliked(false);
-    setIsActive(e.target.dataset.type);
-
-    setPokemons(
-      pokemons.filter(
-        (pokemon) => pokemon.types[0].name === e.target.dataset.type
-      )
-    );
-  };
-
-  const allPokemons = () => {
-    setCliked(true);
-    setIsActive();
-    setIsLoading(true);
-    getAllPokemons();
-  };
-
   return (
     <header>
       <h1>Pokedex</h1>
@@ -37,30 +15,12 @@ export default function Header({
         placeholder="Recherche un Pokemon"
         onChange={(e) => setSearchPokemon(e.target.value.toLocaleLowerCase())}
       />
-
-      <div className="btn-container">
-        {allTypes.map((type, idx) => {
-          return (
-            <button
-              className={isActive === `${type.type}` ? "Active" : null}
-              data-type={type.type}
-              onClick={(e) => {
-                filterPokemons(e);
-              }}
-              style={{ border: `2px solid ${type.color}` }}
-              key={idx}
-            >
-              {type.type}
-            </button>
-          );
-        })}
-        <button
-          onClick={allPokemons}
-          className={`Tout ${cliked ? "Active" : null}`}
-        >
-          Tout
-        </button>
-      </div>
+      <FilterButtons
+        pokemons={pokemons}
+        setPokemons={setPokemons}
+        getAllPokemons={getAllPokemons}
+        setIsLoading={setIsLoading}
+      />
     </header>
   );
 }

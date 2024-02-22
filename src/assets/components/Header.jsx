@@ -6,8 +6,11 @@ export default function Header({ pokemons, setPokemons }) {
 
   const filterPokemons = (e) => {
     setIsActive(e.target.dataset.type);
+
     setPokemons(
-      pokemons.filter((pokemon) => pokemon.types[0].name === `${isActive}`)
+      pokemons.filter(
+        (pokemon) => pokemon.types[0].name === e.target.dataset.type
+      )
     );
   };
 
@@ -31,6 +34,7 @@ export default function Header({ pokemons, setPokemons }) {
             </button>
           );
         })}
+        <button className="Tout">Tout</button>
       </div>
     </header>
   );

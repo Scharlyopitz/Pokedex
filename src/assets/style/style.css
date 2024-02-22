@@ -47,6 +47,9 @@ header button {
 header button:hover {
   cursor: pointer;
 }
+header .Tout {
+  border: 2px solid #000000;
+}
 header .Active {
   background: #1d2732;
 }/*# sourceMappingURL=style.css.map */

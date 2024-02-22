@@ -20,7 +20,6 @@ body {
   padding: 10px;
   width: 300px;
   margin: 10px;
-  background: #2c3e50;
 }
 .cards_container .card:hover {
   cursor: pointer;

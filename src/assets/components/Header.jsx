@@ -28,9 +28,24 @@ export default function Header({
     getAllPokemons();
   };
 
+  const onChangeFilter = (e) => {
+    setPokemons(
+      pokemons.filter((pokemon) => {
+        return e.target.value === ""
+          ? getAllPokemons()
+          : pokemon.name.fr.toLowerCase().includes(e.target.value);
+      })
+    );
+  };
+
   return (
     <header>
       <h1>Pokedex</h1>
+      <input
+        type="text"
+        placeholder="Recherche un Pokemon"
+        onChange={(e) => onChangeFilter(e)}
+      />
 
       <div className="btn-container">
         {allTypes.map((type, idx) => {

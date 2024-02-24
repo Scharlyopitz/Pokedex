@@ -9,6 +9,10 @@ body {
   text-align: center;
   color: #ffffff;
 }
+body a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 .cards_container {
   display: flex;

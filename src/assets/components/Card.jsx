@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import allTypes from "../Types/Types.json";
+import { Link } from "react-router-dom";
 
 export default function Card({ id, name, image, type }) {
   const [color, setColor] = useState([]);
@@ -13,7 +14,8 @@ export default function Card({ id, name, image, type }) {
   }, [type]);
 
   return (
-    <div
+    <Link
+      to={`/${name}`}
       className="card"
       style={{
         border: `3px solid ${color.border}`,
@@ -24,6 +26,6 @@ export default function Card({ id, name, image, type }) {
       <h1>{name}</h1>
       <img src={image} alt={name} />
       <p>Type : {type}</p>
-    </div>
+    </Link>
   );
 }

@@ -8,4 +8,9 @@ body {
   background-color: $Background;
   text-align: center;
   color: $White;
+
+  a {
+    text-decoration: none;
+    color: $White;
+  }
 }

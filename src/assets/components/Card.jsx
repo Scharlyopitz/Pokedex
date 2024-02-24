@@ -15,7 +15,7 @@ export default function Card({ id, name, image, type }) {
 
   return (
     <Link
-      to={`/${name}`}
+      to={`/PokemonStats/${name}`}
       className="card"
       style={{
         border: `3px solid ${color.border}`,

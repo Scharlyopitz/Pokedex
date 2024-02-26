@@ -41,7 +41,12 @@ function App() {
       />
       <Route
         path="/PokemonStats/:name"
-        element={<PokemonStats pokemons={pokemons} />}
+        element={
+          <PokemonStats
+            pokemons={pokemons}
+            setSearchPokemon={setSearchPokemon}
+          />
+        }
       />
     </Routes>
   );

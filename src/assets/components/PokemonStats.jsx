@@ -4,7 +4,7 @@ import PokemonEvolutions from "./PokemonEvolutions/PokemonEvolutions";
 import PokemonInformations from "./PokemonInformations";
 import { Link } from "react-router-dom";
 
-export default function PokemonStats({ pokemons }) {
+export default function PokemonStats({ pokemons, setSearchPokemon }) {
   const { name } = useParams();
   const poke = pokemons.find((pokemon) => pokemon.name.fr === name);
 
@@ -52,7 +52,9 @@ export default function PokemonStats({ pokemons }) {
 function BackHomeBtn() {
   return (
     <>
-      <Link to={"/"}>Back Home</Link>
+      <Link to={"/"} onClick={() => setSearchPokemon("")}>
+        Back Home
+      </Link>
     </>
   );
 }

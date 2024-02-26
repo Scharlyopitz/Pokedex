@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import PokemonEvolution from "./PokemonEvolution";
+import PokemonEvolution from "./PokemonEvolution/PokemonEvolution";
 import PokemonInformations from "./PokemonInformations";
 import { Link } from "react-router-dom";
 

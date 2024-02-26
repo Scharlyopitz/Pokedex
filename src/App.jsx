@@ -21,7 +21,7 @@ function App() {
 
   const [pokemons, setPokemons] = useState([]);
   const [searchPokemon, setSearchPokemon] = useState("");
-  const [pokemonCategory, setPokemonCategory] = useState("");
+  const [pokemonCategory, setPokemonCategory] = useState("All");
   const [isLoading, setIsLoading] = useState(true);
 
   return (

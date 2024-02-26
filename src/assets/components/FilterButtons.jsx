@@ -1,16 +1,12 @@
 import allTypes from "../Types/Types.json";
 import { useState } from "react";
 
-export default function FilterButtons({ setPokemonCategory, setIsLoading }) {
+export default function FilterButtons({ setPokemonCategory, pokemonCategory }) {
   const [isActive, setIsActive] = useState("");
 
   const getPokemonType = (e) => {
     setPokemonCategory(e.target.dataset.type);
     setIsActive(e.target.dataset.type);
-    setIsLoading(true);
-    setTimeout(function () {
-      setIsLoading(false);
-    }, 250);
   };
 
   return (
@@ -35,7 +31,7 @@ export default function FilterButtons({ setPokemonCategory, setIsLoading }) {
         onClick={(e) => {
           getPokemonType(e);
         }}
-        className={`Tout ${isActive === `All` ? "Active" : null}`}
+        className={`Tout ${pokemonCategory !== `All` ? null : "Active"}`}
       >
         Tout
       </button>

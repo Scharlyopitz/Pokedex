@@ -14,6 +14,7 @@ export default function Home({
     <>
       <Header
         setSearchPokemon={setSearchPokemon}
+        pokemonCategory={pokemonCategory}
         setPokemonCategory={setPokemonCategory}
       />
       {isLoading ? (

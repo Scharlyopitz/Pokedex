@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
 import PokemonEvolutions from "./PokemonEvolutions/PokemonEvolutions";
 import PokemonInformations from "./PokemonInformations";
-
 import { Link } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 

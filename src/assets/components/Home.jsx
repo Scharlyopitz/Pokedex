@@ -23,6 +23,7 @@ export default function Home({
           pokemons={pokemons}
           searchPokemon={searchPokemon}
           pokemonCategory={pokemonCategory}
+          setSearchPokemon={setSearchPokemon}
         />
       )}
     </>

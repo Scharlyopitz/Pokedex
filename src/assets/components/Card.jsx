@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import allTypes from "../Types/Types.json";
 import { Link } from "react-router-dom";
 
-export default function Card({ id, name, image, type }) {
+export default function Card({ id, name, image, type, setSearchPokemon }) {
   const [color, setColor] = useState([]);
 
   const callColor = () => {
@@ -15,6 +15,7 @@ export default function Card({ id, name, image, type }) {
 
   return (
     <Link
+      onClick={() => setSearchPokemon("")}
       to={`/PokemonStats/${name}`}
       className="card"
       style={{

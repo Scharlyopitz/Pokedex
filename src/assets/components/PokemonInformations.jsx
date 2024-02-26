@@ -26,7 +26,7 @@ export default function PokemonInformations({ poke, shiny, setShiny }) {
         <p>Taille : {PokemonHeight} </p>
         <p>Catégorie : {PokemonCategory} </p>
         <p>Poids : {PokemonWeight}</p>
-        Talent :
+        Talent(s) :
         {poke.talents?.map((talent, idx) => (
           <p key={idx}>{talent.name}</p>
         ))}

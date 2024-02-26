@@ -4,7 +4,7 @@ export default function NextEvolution({ PokemonNextEvolution }) {
       {PokemonNextEvolution?.map((pokeNextEvo, idx) => (
         <div key={idx}>
           <p>
-            Next : #{pokeNextEvo.pokedexId} {pokeNextEvo.name}
+            Suivant : #{pokeNextEvo.pokedexId} {pokeNextEvo.name}
           </p>
         </div>
       ))}

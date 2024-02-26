@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import PokemonEvolution from "./PokemonEvolution";
 import PokemonInformations from "./PokemonInformations";
+import { Link } from "react-router-dom";
 
 export default function PokemonStats({ pokemons }) {
   const { name } = useParams();
@@ -33,6 +34,7 @@ export default function PokemonStats({ pokemons }) {
     <>
       {poke && (
         <div>
+          <BackHomeBtn />
           <PokemonInformations poke={poke} shiny={shiny} setShiny={setShiny} />
           <PokemonEvolution
             poke={poke}
@@ -43,6 +45,14 @@ export default function PokemonStats({ pokemons }) {
           />
         </div>
       )}
+    </>
+  );
+}
+
+function BackHomeBtn() {
+  return (
+    <>
+      <Link to={"/"}>Back Home</Link>
     </>
   );
 }

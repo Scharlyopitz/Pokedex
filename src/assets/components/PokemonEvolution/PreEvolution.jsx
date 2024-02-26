@@ -4,7 +4,7 @@ export default function PreEvolution({ PokemonPreEvolution }) {
       {PokemonPreEvolution?.map((pokePreEvo, idx) => (
         <div key={idx}>
           <p>
-            Normal : #{pokePreEvo.pokedexId} {pokePreEvo.name}
+            Previous : #{pokePreEvo.pokedexId} {pokePreEvo.name}
           </p>
         </div>
       ))}

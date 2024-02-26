@@ -13,15 +13,13 @@ export default function PokemonEvolution({
     <>
       {poke.evolution && (
         <div>
-          Evolutions :
-          <div>
-            <PreEvolution PokemonPreEvolution={PokemonPreEvolution} />
-            <NextEvolution PokemonNextEvolution={PokemonNextEvolution} />
-            <MegaEvolution
-              PokemonMegaEvolution={PokemonMegaEvolution}
-              shiny={shiny}
-            />
-          </div>
+          <h2>Evolutions :</h2>
+          <PreEvolution PokemonPreEvolution={PokemonPreEvolution} />
+          <NextEvolution PokemonNextEvolution={PokemonNextEvolution} />
+          <MegaEvolution
+            PokemonMegaEvolution={PokemonMegaEvolution}
+            shiny={shiny}
+          />
         </div>
       )}
     </>

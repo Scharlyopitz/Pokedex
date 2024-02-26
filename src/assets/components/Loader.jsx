@@ -1,3 +1,11 @@
+import { HashLoader } from "react-spinners";
+
 export default function Loader() {
-  return <h1>Loading...</h1>;
+  return (
+    <HashLoader
+      className="Loader"
+      color="#36d7b7"
+      style={{ transform: "translate(-50%,-50%)" }}
+    />
+  );
 }

@@ -16,16 +16,16 @@ export default function Home({
         setSearchPokemon={setSearchPokemon}
         setPokemonCategory={setPokemonCategory}
       />
-      {/* {isLoading ? ( */}
-      <Loader />
-      {/* ) : (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <Cards
           pokemons={pokemons}
           searchPokemon={searchPokemon}
           pokemonCategory={pokemonCategory}
           setSearchPokemon={setSearchPokemon}
         />
-      )} */}
+      )}
     </>
   );
 }

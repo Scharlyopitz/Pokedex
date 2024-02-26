@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import PokemonEvolution from "./PokemonEvolution/PokemonEvolution";
+import PokemonEvolutions from "./PokemonEvolutions/PokemonEvolutions";
 import PokemonInformations from "./PokemonInformations";
 import { Link } from "react-router-dom";
 
@@ -36,7 +36,7 @@ export default function PokemonStats({ pokemons }) {
         <div>
           <BackHomeBtn />
           <PokemonInformations poke={poke} shiny={shiny} setShiny={setShiny} />
-          <PokemonEvolution
+          <PokemonEvolutions
             poke={poke}
             PokemonMegaEvolution={PokemonMegaEvolution}
             PokemonNextEvolution={PokemonNextEvolution}

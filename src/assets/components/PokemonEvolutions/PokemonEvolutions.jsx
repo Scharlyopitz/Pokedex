@@ -2,7 +2,7 @@ import MegaEvolution from "./MegaEvolution";
 import NextEvolution from "./NextEvolution";
 import PreEvolution from "./PreEvolution";
 
-export default function PokemonEvolution({
+export default function PokemonEvolutions({
   poke,
   PokemonPreEvolution,
   PokemonNextEvolution,

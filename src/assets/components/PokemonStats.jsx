@@ -10,11 +10,12 @@ export default function PokemonStats({ pokemons }) {
   const [shiny, setShiny] = useState(false);
 
   // const [pokemonNextEvoName, setPokemonNextEvoName] = useState("");
-  // const [pokemonPreEvoName, setPokemonPreEvoName] = useState("");
+  const [pokemonPreEvoName, setPokemonPreEvoName] = useState("");
 
   // const imgPreEvo = pokemons.find(
   //   (pokemon) => pokemon.name.fr === pokemonPreEvoName
   // );
+  // console.log(imgPreEvo);
 
   // const imgNextEvo = pokemons.find(
   //   (pokemon) => pokemon.name.fr === pokemonNextEvoName
@@ -24,10 +25,9 @@ export default function PokemonStats({ pokemons }) {
   const PokemonNextEvolution = poke?.evolution?.next;
   const PokemonMegaEvolution = poke?.evolution?.mega;
 
-  // useEffect(() => {
-  //   PokemonNextEvolution?.map((pok) => console.log(pok));
-  //   PokemonPreEvolution?.map((pok) => setPokemonPreEvoName(pok.name));
-  // }, [poke]);
+  useEffect(() => {
+    PokemonPreEvolution?.map((pok) => setPokemonPreEvoName(pok.name));
+  }, [poke]);
 
   return (
     <>

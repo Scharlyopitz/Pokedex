@@ -16,13 +16,19 @@ export default function Card({ id, name, image, type, setSearchPokemon }) {
   return (
     <Link
       onClick={() => setSearchPokemon("")}
+      data-id={id}
       to={`/PokemonStats/${name}`}
       className="card"
       style={{
         border: `3px solid ${color.border}`,
         background: `${color.background}`,
+        boxShadow: `0px 0 30px 5px ${color.border},inset 0px 0 20px ${color.border}`,
       }}
     >
+      <div
+        className="background"
+        style={{ background: `${color.background}` }}
+      ></div>
       <h1>#{id}</h1>
       <h1>{name}</h1>
       <img src={image} alt={name} />

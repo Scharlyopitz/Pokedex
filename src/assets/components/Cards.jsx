@@ -10,17 +10,13 @@ export default function Cards({
     <div className="cards_container">
       {pokemons
         .filter((value) => {
-          console.log(value.name.fr.replace(/[éè]/gi, "e"));
+          const SearchMatch = value.name.fr
+            .toLowerCase()
+            .replace(/[éè]/gi, "e")
+            .includes(searchPokemon);
           return pokemonCategory === "All"
-            ? value.name.fr
-                .toLowerCase()
-                .replace(/[éè]/gi, "e")
-                .includes(searchPokemon)
-            : value.name.fr
-                .toLowerCase()
-                .replace(/[éè]/gi, "e")
-                .includes(searchPokemon) &&
-                value.types[0].name === pokemonCategory;
+            ? SearchMatch
+            : SearchMatch && value.types[0].name === pokemonCategory;
         })
         .map((value, idx) => {
           return (

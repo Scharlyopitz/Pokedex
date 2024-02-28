@@ -12,24 +12,32 @@ export default function PokemonStats({ pokemons }) {
 
   const [shiny, setShiny] = useState(false);
 
-  // const [pokemonNextEvoName, setPokemonNextEvoName] = useState("");
-  const [pokemonPreEvoName, setPokemonPreEvoName] = useState("");
-
-  // const imgPreEvo = pokemons.find(
-  //   (pokemon) => pokemon.name.fr === pokemonPreEvoName
-  // );
-  // console.log(imgPreEvo);
-
-  // const imgNextEvo = pokemons.find(
-  //   (pokemon) => pokemon.name.fr === pokemonNextEvoName
-  // );
-
   const PokemonPreEvolution = poke?.evolution?.pre;
   const PokemonNextEvolution = poke?.evolution?.next;
   const PokemonMegaEvolution = poke?.evolution?.mega;
 
+  const [pokemonNextEvoName, setPokemonNextEvoName] = useState([]);
+  const [pokemonPreEvoName, setPokemonPreEvoName] = useState([]);
+
+  const PreEvolutions =
+    pokemonPreEvoName &&
+    pokemons.filter(
+      (pokemon) =>
+        pokemon.name.fr === pokemonPreEvoName[0] ||
+        pokemon.name.fr === pokemonPreEvoName[1]
+    );
+
+  const NextEvolutions =
+    pokemonNextEvoName &&
+    pokemons.filter(
+      (pokemon) =>
+        pokemon.name.fr === pokemonNextEvoName[0] ||
+        pokemon.name.fr === pokemonNextEvoName[1]
+    );
+
   useEffect(() => {
-    PokemonPreEvolution?.map((pok) => setPokemonPreEvoName(pok.name));
+    setPokemonPreEvoName(PokemonPreEvolution?.map((pok) => pok.name));
+    setPokemonNextEvoName(PokemonNextEvolution?.map((pok) => pok.name));
   }, [poke]);
 
   return (
@@ -41,6 +49,8 @@ export default function PokemonStats({ pokemons }) {
             poke={poke}
             shiny={shiny}
             setShiny={setShiny}
+            PreEvolutions={PreEvolutions}
+            NextEvolutions={NextEvolutions}
             PokemonPreEvolution={PokemonPreEvolution}
             PokemonNextEvolution={PokemonNextEvolution}
           />

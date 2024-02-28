@@ -7,8 +7,6 @@ export default function PokemonInformations({
   setShiny,
   PreEvolutions,
   NextEvolutions,
-  PokemonNextEvolution,
-  PokemonPreEvolution,
 }) {
   const PokemonId = poke?.pokedexId;
   const PokemonName = poke?.name.fr;
@@ -31,20 +29,12 @@ export default function PokemonInformations({
           </p>
         )}
         <div>
-          <PreEvolution
-            PokemonPreEvolution={PokemonPreEvolution}
-            PreEvolutions={PreEvolutions}
-            shiny={shiny}
-          />
+          <PreEvolution PreEvolutions={PreEvolutions} shiny={shiny} />
           <img
             src={shiny ? PokemonImgShiny : PokemonImgRegular}
             alt={`image ${PokemonName}`}
           />
-          <NextEvolution
-            PokemonNextEvolution={PokemonNextEvolution}
-            NextEvolutions={NextEvolutions}
-            shiny={shiny}
-          />
+          <NextEvolution NextEvolutions={NextEvolutions} shiny={shiny} />
         </div>
         <p>Taille : {PokemonHeight} </p>
         <p>Catégorie : {PokemonCategory} </p>

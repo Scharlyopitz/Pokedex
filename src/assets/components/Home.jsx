@@ -1,6 +1,7 @@
 import Loader from "./Loader";
 import Cards from "./Cards";
 import Header from "./Header";
+import { useEffect } from "react";
 
 export default function Home({
   setSearchPokemon,
@@ -10,6 +11,10 @@ export default function Home({
   searchPokemon,
   pokemons,
 }) {
+  useEffect(() => {
+    document.title = "Pokédex | Home";
+  }, []);
+
   return (
     <>
       <Header

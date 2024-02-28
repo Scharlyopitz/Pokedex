@@ -12,12 +12,16 @@ export default function PokemonStats({ pokemons }) {
 
   const [shiny, setShiny] = useState(false);
 
-  const PokemonPreEvolution = poke?.evolution?.pre;
-  const PokemonNextEvolution = poke?.evolution?.next;
-  const PokemonMegaEvolution = poke?.evolution?.mega;
-
   const [pokemonNextEvoName, setPokemonNextEvoName] = useState([]);
   const [pokemonPreEvoName, setPokemonPreEvoName] = useState([]);
+
+  useEffect(() => {
+    document.title = `Pokédex | ${name}`;
+    setPokemonPreEvoName(poke?.evolution?.pre?.map((preEvo) => preEvo.name));
+    setPokemonNextEvoName(
+      poke?.evolution?.next?.map((nextEvo) => nextEvo.name)
+    );
+  }, [poke]);
 
   const PreEvolutions =
     pokemonPreEvoName &&
@@ -35,11 +39,6 @@ export default function PokemonStats({ pokemons }) {
         pokemon.name.fr === pokemonNextEvoName[1]
     );
 
-  useEffect(() => {
-    setPokemonPreEvoName(PokemonPreEvolution?.map((pok) => pok.name));
-    setPokemonNextEvoName(PokemonNextEvolution?.map((pok) => pok.name));
-  }, [poke]);
-
   return (
     <>
       {poke && (
@@ -51,11 +50,9 @@ export default function PokemonStats({ pokemons }) {
             setShiny={setShiny}
             PreEvolutions={PreEvolutions}
             NextEvolutions={NextEvolutions}
-            PokemonPreEvolution={PokemonPreEvolution}
-            PokemonNextEvolution={PokemonNextEvolution}
           />
           <MegaEvolution
-            PokemonMegaEvolution={PokemonMegaEvolution}
+            PokemonMegaEvolution={poke?.evolution?.mega}
             shiny={shiny}
           />
         </div>

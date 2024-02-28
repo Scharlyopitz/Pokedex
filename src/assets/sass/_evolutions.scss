@@ -6,4 +6,11 @@
   .nextEvolution img {
     width: 60%;
   }
+
+  .preEvolution,
+  .nextEvolution {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
 }

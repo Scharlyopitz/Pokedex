@@ -103,4 +103,10 @@ header .Active {
 .evolutions .preEvolution img,
 .evolutions .nextEvolution img {
   width: 60%;
+}
+.evolutions .preEvolution,
+.evolutions .nextEvolution {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }/*# sourceMappingURL=style.css.map */

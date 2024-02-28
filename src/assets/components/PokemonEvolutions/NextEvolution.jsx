@@ -6,7 +6,7 @@ export default function NextEvolution({ NextEvolutions, shiny }) {
   return (
     <>
       {NextEvolutions?.map((NextEvolution, idx) => (
-        <div key={idx}>
+        <div key={idx} className="nextEvolution">
           <div>
             <FontAwesomeIcon icon={faChevronRight} />
             <Link to={`/PokemonStats/${NextEvolution.name.fr}`}>

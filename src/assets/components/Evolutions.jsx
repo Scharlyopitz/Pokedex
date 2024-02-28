@@ -10,7 +10,7 @@ export default function Evolutions({
   PokemonName,
 }) {
   return (
-    <div>
+    <div className="evolutions">
       <PreEvolution PreEvolutions={PreEvolutions} shiny={shiny} />
       <img
         src={shiny ? PokemonImgShiny : PokemonImgRegular}

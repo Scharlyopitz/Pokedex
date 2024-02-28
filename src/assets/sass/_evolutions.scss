@@ -1,0 +1,9 @@
+.evolutions {
+  display: flex;
+  justify-content: center;
+
+  .preEvolution img,
+  .nextEvolution img {
+    width: 60%;
+  }
+}

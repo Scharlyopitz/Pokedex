@@ -6,7 +6,7 @@ export default function PreEvolution({ PreEvolutions, shiny }) {
   return (
     <>
       {PreEvolutions?.map((PreEvolution, idx) => (
-        <div key={idx}>
+        <div key={idx} className="preEvolution">
           <div>
             <Link to={`/PokemonStats/${PreEvolution.name.fr}`}>
               <img

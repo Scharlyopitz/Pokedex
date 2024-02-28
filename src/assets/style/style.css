@@ -14,6 +14,10 @@ body,
 body button {
   font-family: "Oswald", sans-serif;
 }
+body img,
+body a {
+  -webkit-user-drag: none;
+}
 body a {
   text-decoration: none;
   color: #ffffff;
@@ -90,4 +94,13 @@ header .Tout {
 }
 header .Active {
   background: #1d2732;
+}
+
+.evolutions {
+  display: flex;
+  justify-content: center;
+}
+.evolutions .preEvolution img,
+.evolutions .nextEvolution img {
+  width: 60%;
 }/*# sourceMappingURL=style.css.map */

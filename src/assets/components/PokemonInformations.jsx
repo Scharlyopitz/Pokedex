@@ -1,5 +1,4 @@
-import NextEvolution from "../components/PokemonEvolutions/NextEvolution";
-import PreEvolution from "../components/PokemonEvolutions/PreEvolution";
+import Evolutions from "./Evolutions";
 
 export default function PokemonInformations({
   poke,
@@ -28,14 +27,14 @@ export default function PokemonInformations({
             <button onClick={() => setShiny(true)}>Shiny</button>
           </p>
         )}
-        <div>
-          <PreEvolution PreEvolutions={PreEvolutions} shiny={shiny} />
-          <img
-            src={shiny ? PokemonImgShiny : PokemonImgRegular}
-            alt={`image ${PokemonName}`}
-          />
-          <NextEvolution NextEvolutions={NextEvolutions} shiny={shiny} />
-        </div>
+        <Evolutions
+          PreEvolutions={PreEvolutions}
+          NextEvolutions={NextEvolutions}
+          shiny={shiny}
+          PokemonImgShiny={PokemonImgShiny}
+          PokemonImgRegular={PokemonImgRegular}
+          PokemonName={PokemonName}
+        />
         <p>Taille : {PokemonHeight} </p>
         <p>Catégorie : {PokemonCategory} </p>
         <p>Poids : {PokemonWeight}</p>

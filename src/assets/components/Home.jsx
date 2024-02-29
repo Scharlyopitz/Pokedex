@@ -2,6 +2,7 @@ import Loader from "./Loader";
 import Cards from "./Cards";
 import Header from "./Header";
 import { useEffect } from "react";
+import DemoPokemon from "./DemoPokemon";
 
 export default function Home({
   setSearchPokemon,
@@ -25,12 +26,15 @@ export default function Home({
       {isLoading ? (
         <Loader />
       ) : (
-        <Cards
-          pokemons={pokemons}
-          searchPokemon={searchPokemon}
-          pokemonCategory={pokemonCategory}
-          setSearchPokemon={setSearchPokemon}
-        />
+        <main>
+          <DemoPokemon />
+          <Cards
+            pokemons={pokemons}
+            searchPokemon={searchPokemon}
+            pokemonCategory={pokemonCategory}
+            setSearchPokemon={setSearchPokemon}
+          />
+        </main>
       )}
     </>
   );

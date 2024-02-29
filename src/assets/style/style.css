@@ -24,11 +24,15 @@ body a {
   color: #ffffff;
 }
 
+main {
+  padding: 0 10%;
+}
+
 .cards_container {
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin: 30vh 10% 0 0;
+  margin: 30vh 0;
 }
 .cards_container .hoveredPokemon {
   opacity: 0;
@@ -102,6 +106,7 @@ body a {
 header {
   width: 80%;
   margin: 50px auto;
+  display: flex;
 }
 header input {
   background: no-repeat;
@@ -154,4 +159,20 @@ header .Active {
 }
 .evolutions .currentPokemon {
   filter: drop-shadow(25px -5px 8px #000);
+}
+
+.demoPokemon {
+  background-color: red;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+  bottom: 5%;
+  border-radius: 20px;
+  border: 10px solid #fbe44e;
+}
+.demoPokemon img {
+  width: 500px;
 }/*# sourceMappingURL=style.css.map */

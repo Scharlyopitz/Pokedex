@@ -5,6 +5,7 @@
   .preEvolution img,
   .nextEvolution img {
     width: 60%;
+    height: 100%;
   }
 
   .preEvolution,
@@ -15,6 +16,6 @@
   }
 
   .currentPokemon {
-    filter: drop-shadow(25px 15px 25px #000);
+    filter: drop-shadow(25px -5px 8px #000);
   }
 }

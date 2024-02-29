@@ -29,7 +29,7 @@ export default function Card({ id, name, image, type, setSearchPokemon }) {
         className="background"
         style={{ background: `${color.background}` }}
       ></div>
-      <h1>#{id}</h1>
+      <h1>N° {id}</h1>
       <h1>{name}</h1>
       <img src={image} alt={name} />
       <p>Type : {type}</p>

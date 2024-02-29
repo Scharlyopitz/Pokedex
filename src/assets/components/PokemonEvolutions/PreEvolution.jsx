@@ -20,7 +20,8 @@ export default function PreEvolution({ PreEvolutions, shiny }) {
             </Link>
             <FontAwesomeIcon icon={faChevronLeft} />
           </div>
-          #{PreEvolution.pokedexId} {PreEvolution.name.fr}{" "}
+          <p>N° {PreEvolution.pokedexId}</p>
+          <p>{PreEvolution.name.fr}</p>
         </div>
       ))}
     </>

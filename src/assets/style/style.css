@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=VT323&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +13,7 @@ body {
 }
 body,
 body button {
-  font-family: "Oswald", sans-serif;
+  font-family: "VT323", monospace;
 }
 body img,
 body a {
@@ -103,6 +104,7 @@ header .Active {
 .evolutions .preEvolution img,
 .evolutions .nextEvolution img {
   width: 60%;
+  height: 100%;
 }
 .evolutions .preEvolution,
 .evolutions .nextEvolution {
@@ -111,5 +113,5 @@ header .Active {
   justify-content: end;
 }
 .evolutions .currentPokemon {
-  filter: drop-shadow(25px 15px 25px #000);
+  filter: drop-shadow(25px -5px 8px #000);
 }/*# sourceMappingURL=style.css.map */

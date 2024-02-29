@@ -18,7 +18,7 @@ export default function PokemonInformations({
   return (
     <>
       <div>
-        <h1># {PokemonId}</h1>
+        <h1>N° {PokemonId}</h1>
         <h1>{PokemonName}</h1>
         {PokemonImgShiny && (
           <p>

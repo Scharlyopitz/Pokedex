@@ -25,14 +25,13 @@ export default function Card({ id, name, image, type, setSearchPokemon }) {
         // boxShadow: `0px 0 30px 5px ${color.border},inset 0px 0 20px ${color.border}`,
       }}
     >
-      <div
+      {/* <div
         className="background"
         style={{ background: `${color.background}` }}
-      ></div>
-      <h1>N° {id}</h1>
-      <h1>{name}</h1>
+      ></div> */}
       <img src={image} alt={name} />
-      <p>Type : {type}</p>
+      <p>N° {id}</p> <p>{name}</p>
+      {/* <p>Type : {type}</p> */}
     </Link>
   );
 }

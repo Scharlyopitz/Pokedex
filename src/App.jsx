@@ -10,7 +10,7 @@ function App() {
     fetch(URL)
       .then((response) => response.json())
       .then((data) => {
-        setPokemons(data.filter((poke) => poke.pokedexId > 0));
+        setPokemons(data.filter((poke) => poke.pokedex_id > 0));
         setIsLoading(false);
       });
   }

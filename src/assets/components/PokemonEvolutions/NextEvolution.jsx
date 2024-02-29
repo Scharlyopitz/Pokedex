@@ -20,7 +20,7 @@ export default function NextEvolution({ NextEvolutions, shiny }) {
               />
             </Link>
           </div>
-          <p>N° {NextEvolution.pokedexId}</p>
+          <p>N° {NextEvolution.pokedex_id}</p>
           <p>{NextEvolution.name.fr}</p>
         </div>
       ))}

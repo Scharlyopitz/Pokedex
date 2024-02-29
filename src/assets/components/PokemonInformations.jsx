@@ -7,7 +7,7 @@ export default function PokemonInformations({
   PreEvolutions,
   NextEvolutions,
 }) {
-  const PokemonId = poke?.pokedexId;
+  const PokemonId = poke?.pokedex_id;
   const PokemonName = poke?.name.fr;
   const PokemonImgRegular = poke?.sprites.regular;
   const PokemonWeight = poke?.weight;

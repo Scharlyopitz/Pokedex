@@ -22,7 +22,7 @@ export default function Cards({
           return (
             <Card
               key={idx}
-              id={value.pokedexId}
+              id={value.pokedex_id}
               name={value.name.fr}
               image={value.sprites.regular}
               type={value.types[0].name}

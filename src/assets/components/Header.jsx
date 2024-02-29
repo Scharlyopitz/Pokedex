@@ -1,5 +1,4 @@
 import FilterButtons from "./FilterButtons";
-import PokeballSvg from "/PokeBall.svg";
 
 export default function Header({
   setSearchPokemon,
@@ -8,7 +7,6 @@ export default function Header({
 }) {
   return (
     <header>
-      <img src={PokeballSvg} alt="PokeBall" />
       <h1>Pokedex</h1>
       <input
         type="text"

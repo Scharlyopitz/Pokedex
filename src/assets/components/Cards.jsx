@@ -12,7 +12,7 @@ export default function Cards({
         .filter((value) => {
           const SearchMatch = value.name.fr
             .toLowerCase()
-            .replace(/[éè]/gi, "e")
+            .replace(/[éèêë]/gi, "e")
             .includes(searchPokemon);
           return pokemonCategory === "All"
             ? SearchMatch

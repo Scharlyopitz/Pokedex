@@ -168,7 +168,6 @@ header .Active {
 }
 
 .demoPokemon {
-  background-color: red;
   position: fixed;
   display: flex;
   align-items: center;
@@ -176,9 +175,23 @@ header .Active {
   width: 800px;
   height: 800px;
   bottom: 4%;
-  border-radius: 20px;
-  border: 10px solid #fbe44e;
+  border-radius: 40px;
+  border: 20px solid #fbe44e;
+  background: repeating-linear-gradient(#ffffff, #ffffff 10px, hsla(0, 0%, 0%, 0.1) 10px, hsla(0, 0%, 0%, 0.1) 15px, #ffffff 10px, #ffffff 50px);
 }
 .demoPokemon img {
-  width: 500px;
+  width: 80%;
+  animation: PokeMooveImg 2s ease-in-out infinite;
+  filter: drop-shadow(25px -5px 8px #000);
+}
+@keyframes PokeMooveImg {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
 }/*# sourceMappingURL=style.css.map */

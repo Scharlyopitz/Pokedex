@@ -1,5 +1,4 @@
 .demoPokemon {
-  background-color: red;
   position: fixed;
   display: flex;
   align-items: center;
@@ -7,10 +6,32 @@
   width: 800px;
   height: 800px;
   bottom: 4%;
-  border-radius: 20px;
-  border: 10px solid $Yellow;
+  border-radius: 40px;
+  border: 20px solid $Yellow;
+  background: repeating-linear-gradient(
+    $White,
+    $White 10px,
+    $BlackOpacity 10px,
+    $BlackOpacity 15px,
+    $White 10px,
+    $White 50px
+  );
 
   img {
-    width: 500px;
+    width: 80%;
+    animation: PokeMooveImg 2s ease-in-out infinite;
+    filter: drop-shadow(25px -5px 8px #000);
+  }
+
+  @keyframes PokeMooveImg {
+    0% {
+      transform: translateY(-10%);
+    }
+    50% {
+      transform: translateY(-5%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
   }
 }

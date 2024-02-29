@@ -1,7 +1,7 @@
 import Loader from "./Loader";
 import Cards from "./Cards";
 import Header from "./Header";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import DemoPokemon from "./DemoPokemon";
 
 export default function Home({
@@ -16,23 +16,26 @@ export default function Home({
     document.title = "Pokédex | Home";
   }, []);
 
+  const [getPokemonHovered, setGetPokemonHovered] = useState("");
+
   return (
     <>
       <Header
         setSearchPokemon={setSearchPokemon}
         pokemonCategory={pokemonCategory}
         setPokemonCategory={setPokemonCategory}
+        searchPokemon={searchPokemon}
       />
       {isLoading ? (
         <Loader />
       ) : (
         <main>
-          <DemoPokemon />
+          <DemoPokemon getPokemonHovered={getPokemonHovered} />
           <Cards
             pokemons={pokemons}
             searchPokemon={searchPokemon}
             pokemonCategory={pokemonCategory}
-            setSearchPokemon={setSearchPokemon}
+            setGetPokemonHovered={setGetPokemonHovered}
           />
         </main>
       )}

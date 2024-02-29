@@ -3,11 +3,11 @@ import PokeBall from "/pokeball.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function Card({ id, name, image, setSearchPokemon }) {
+export default function Card({ id, name, image, setGetPokemonHovered }) {
   return (
     <>
       <Link
-        onClick={() => setSearchPokemon("")}
+        onMouseEnter={(e) => setGetPokemonHovered(image)}
         data-id={id}
         to={`/PokemonStats/${name}`}
         className="card"

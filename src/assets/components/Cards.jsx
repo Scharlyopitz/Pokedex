@@ -4,7 +4,7 @@ export default function Cards({
   pokemons,
   searchPokemon,
   pokemonCategory,
-  setSearchPokemon,
+  setGetPokemonHovered,
 }) {
   return (
     <div className="cards_container">
@@ -26,7 +26,7 @@ export default function Cards({
               name={value.name.fr}
               image={value.sprites.regular}
               type={value.types[0].name}
-              setSearchPokemon={setSearchPokemon}
+              setGetPokemonHovered={setGetPokemonHovered}
             />
           );
         })}

@@ -1,9 +1,7 @@
-import PokeBall from "/pokeball.png";
-
-export default function DemoPokemon() {
+export default function DemoPokemon({ getPokemonHovered }) {
   return (
     <div className="demoPokemon">
-      <img src={PokeBall} alt="pokemon" />
+      <img src={getPokemonHovered} alt="pokemon" />
     </div>
   );
 }

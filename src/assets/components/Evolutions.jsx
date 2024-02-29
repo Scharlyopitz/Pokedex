@@ -13,6 +13,7 @@ export default function Evolutions({
     <div className="evolutions">
       <PreEvolution PreEvolutions={PreEvolutions} shiny={shiny} />
       <img
+        className="currentPokemon"
         src={shiny ? PokemonImgShiny : PokemonImgRegular}
         alt={`image ${PokemonName}`}
       />

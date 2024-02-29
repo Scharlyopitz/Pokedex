@@ -109,4 +109,7 @@ header .Active {
   display: flex;
   flex-direction: column;
   justify-content: end;
+}
+.evolutions .currentPokemon {
+  filter: drop-shadow(25px 15px 25px #000);
 }/*# sourceMappingURL=style.css.map */

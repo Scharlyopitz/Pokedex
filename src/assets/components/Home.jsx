@@ -3,6 +3,7 @@ import Cards from "./Cards";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 import DemoPokemon from "./DemoPokemon";
+import ScrollBar from "./ScrollBar";
 
 export default function Home({
   setSearchPokemon,
@@ -37,6 +38,7 @@ export default function Home({
             pokemonCategory={pokemonCategory}
             setGetPokemonHovered={setGetPokemonHovered}
           />
+          <ScrollBar />
         </main>
       )}
     </>

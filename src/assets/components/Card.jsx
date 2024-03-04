@@ -7,7 +7,9 @@ export default function Card({ id, name, image, setGetPokemonHovered }) {
   return (
     <>
       <Link
-        onMouseEnter={(e) => setGetPokemonHovered(image)}
+        onMouseEnter={() => {
+          setGetPokemonHovered(image);
+        }}
         data-id={id}
         to={`/PokemonStats/${name}`}
         className="card"

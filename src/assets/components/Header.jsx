@@ -15,6 +15,7 @@ export default function Header({
         placeholder="Recherche un Pokemon..."
         onChange={(e) => setSearchPokemon(e.target.value.toLocaleLowerCase())}
       />
+
       <FilterButtons
         setPokemonCategory={setPokemonCategory}
         pokemonCategory={pokemonCategory}

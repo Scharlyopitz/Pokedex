@@ -11,8 +11,12 @@ body {
   text-align: center;
   color: #ffffff;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 body,
-body button {
+body button,
+body input {
   font-family: "VT323", monospace;
 }
 body img,
@@ -117,9 +121,9 @@ header {
 header input {
   background: no-repeat;
   border: 2px solid #000000;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 10px;
-  color: #ffffff;
+  color: #000000;
   outline: none;
 }
 header input::-moz-placeholder {

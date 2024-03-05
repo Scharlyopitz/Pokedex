@@ -9,8 +9,13 @@ body {
   text-align: center;
   color: $White;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   &,
-  button {
+  button,
+  input {
     // font-family: "Oswald", sans-serif;
     font-family: "VT323", monospace;
   }

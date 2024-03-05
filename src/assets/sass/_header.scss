@@ -11,9 +11,9 @@ header {
   input {
     background: no-repeat;
     border: 2px solid $Black;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px;
-    color: $White;
+    color: $Black;
     outline: none;
 
     &::placeholder {

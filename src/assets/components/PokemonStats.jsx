@@ -42,7 +42,7 @@ export default function PokemonStats({ pokemons }) {
   return (
     <>
       {poke && (
-        <div>
+        <div className="PokePage">
           <BackHomeBtn />
           <PokemonInformations
             poke={poke}

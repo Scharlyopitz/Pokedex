@@ -7,6 +7,7 @@ header {
   display: flex;
   align-items: center;
   background-color: $Header;
+  border-bottom: 8px solid $LightBlack;
 
   input {
     background: no-repeat;

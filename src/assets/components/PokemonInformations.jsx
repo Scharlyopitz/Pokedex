@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Evolutions from "./Evolutions";
 
 export default function PokemonInformations({
@@ -15,6 +16,9 @@ export default function PokemonInformations({
   const PokemonCategory = poke?.category;
   const PokemonImgShiny = poke?.sprites.shiny;
 
+  const [activeNormal, setActiveNormal] = useState(true);
+  const [activeShiny, setActiveShiny] = useState(false);
+
   return (
     <>
       <div className="information_container">
@@ -25,15 +29,35 @@ export default function PokemonInformations({
           />
         </div>
         <div className="informations">
-          <h1>N° {PokemonId}</h1>
-          <h1>{PokemonName}</h1>
-          {PokemonImgShiny && (
-            <p>
-              version : <button onClick={() => setShiny(false)}>Normal</button>
-              {" | "}
-              <button onClick={() => setShiny(true)}>Shiny</button>
-            </p>
-          )}
+          <div className="information">
+            <h1>
+              N° {PokemonId} {PokemonName}
+            </h1>
+            {PokemonImgShiny && (
+              <div className="buttons">
+                <button
+                  className={`Normal ${activeNormal && "Active"}`}
+                  onClick={() => {
+                    setShiny(false),
+                      setActiveShiny(false),
+                      setActiveNormal(true);
+                  }}
+                >
+                  NORMAL
+                </button>
+                <button
+                  className={`Shiny ${activeShiny && "Active"}`}
+                  onClick={() => {
+                    setShiny(true),
+                      setActiveNormal(false),
+                      setActiveShiny(true);
+                  }}
+                >
+                  SHINY
+                </button>
+              </div>
+            )}
+          </div>
           {/* <Evolutions
           PreEvolutions={PreEvolutions}
           NextEvolutions={NextEvolutions}

@@ -1,5 +1,4 @@
 .PokePage {
-  position: absolute;
   width: 100vw;
   height: 100vh;
   background: $Blue;
@@ -8,29 +7,65 @@
     display: flex;
     align-items: center;
 
-    .vignette {
-      background: $Vignette;
-      width: 100px;
-      padding: 10px 0;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
+    .informations {
+      .information {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
 
-    .information {
-      display: flex;
-      align-items: center;
-      margin: 5px 0;
-    }
+        .buttons {
+          margin: 0 10px;
+          .Normal {
+            color: #0072b0;
+            border: 2px solid #17adff;
 
-    .type {
-      display: flex;
-      align-items: center;
-      margin-right: 10px;
-      p {
-        margin: 0 5px;
-      }
-      img {
-        width: 40px;
+            &.Active {
+              border: 4px solid #17adff;
+            }
+          }
+
+          .Shiny {
+            color: #dd2d51;
+            border: 2px solid #eb859a;
+
+            &.Active {
+              border: 4px solid #eb859a;
+            }
+          }
+
+          .Normal,
+          .Shiny {
+            background: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .vignette {
+          background: $Vignette;
+          width: 100px;
+          padding: 12px 0;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+
+        .type {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+
+          p {
+            margin: 0 5px;
+          }
+
+          img {
+            width: 40px;
+          }
+        }
       }
     }
   }

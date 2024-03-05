@@ -251,7 +251,6 @@ header .Active {
 }
 
 .PokePage {
-  position: absolute;
   width: 100vw;
   height: 100vh;
   background: #7eb9ed;
@@ -260,26 +259,53 @@ header .Active {
   display: flex;
   align-items: center;
 }
-.PokePage .information_container .vignette {
-  background: #59b4e8;
-  width: 100px;
-  padding: 10px 0;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.PokePage .information_container .information {
+.PokePage .information_container .informations .information {
   display: flex;
   align-items: center;
   margin: 5px 0;
 }
-.PokePage .information_container .type {
+.PokePage .information_container .informations .information .buttons {
+  margin: 0 10px;
+}
+.PokePage .information_container .informations .information .buttons .Normal {
+  color: #0072b0;
+  border: 2px solid #17adff;
+}
+.PokePage .information_container .informations .information .buttons .Normal.Active {
+  border: 4px solid #17adff;
+}
+.PokePage .information_container .informations .information .buttons .Shiny {
+  color: #dd2d51;
+  border: 2px solid #eb859a;
+}
+.PokePage .information_container .informations .information .buttons .Shiny.Active {
+  border: 4px solid #eb859a;
+}
+.PokePage .information_container .informations .information .buttons .Normal,
+.PokePage .information_container .informations .information .buttons .Shiny {
+  background: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.PokePage .information_container .informations .information .buttons .Normal:hover,
+.PokePage .information_container .informations .information .buttons .Shiny:hover {
+  cursor: pointer;
+}
+.PokePage .information_container .informations .information .vignette {
+  background: #59b4e8;
+  width: 100px;
+  padding: 12px 0;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.PokePage .information_container .informations .information .type {
   display: flex;
   align-items: center;
   margin-right: 10px;
 }
-.PokePage .information_container .type p {
+.PokePage .information_container .informations .information .type p {
   margin: 0 5px;
 }
-.PokePage .information_container .type img {
+.PokePage .information_container .informations .information .type img {
   width: 40px;
 }/*# sourceMappingURL=style.css.map */

@@ -27,6 +27,7 @@ export default function Home({
         setPokemonCategory={setPokemonCategory}
         searchPokemon={searchPokemon}
       />
+      <div className="backGround"></div>
       {isLoading ? (
         <Loader />
       ) : (

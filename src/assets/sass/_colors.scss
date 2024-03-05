@@ -1,3 +1,5 @@
+// Basics
+
 $Red: #d73535;
 $Blue: #2600ff;
 $Yellow: #fbe44e;
@@ -5,12 +7,28 @@ $White: #ffffff;
 $BlackOpacity: hsla(0, 0%, 0%, 0.1);
 $Black: #000000;
 $Grey: #4b4b4b;
+
+// Button & General Backgrounds
+
 $Background: #34495e;
 $BackgroundBis: #2c3e50;
 $PokemonBackground: #fde9ad;
 $PokemonBackgroundHovered: #f18a34;
+$HomeBackground1: linear-gradient(
+  0deg,
+  rgba(111, 148, 224, 1) 0%,
+  rgba(56, 78, 159, 1) 45%,
+  rgba(56, 78, 159, 1) 55%,
+  rgba(111, 148, 224, 1) 100%
+);
+
+// Header
+
 $Header: #ffe16d;
 $Active: #1d2732;
+
+// Scroll Bar
+
 $BorderScrollBar: #8bb1f4;
 $BackgroundScrollBar: #09304f;
 $LineScrollBar: #3d7790;

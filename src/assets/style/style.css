@@ -181,15 +181,18 @@ header .Active {
   filter: drop-shadow(25px -5px 8px #000);
 }
 
+.demoPokemon {
+  position: fixed;
+  bottom: 4%;
+}
+
 .demoPokemon,
 .currentPokemon {
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 800px;
   height: 800px;
-  bottom: 4%;
   border-radius: 40px;
   border: 20px solid #fbe44e;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.36);
@@ -197,10 +200,11 @@ header .Active {
 }
 .demoPokemon img,
 .currentPokemon img {
-  width: 80%;
+  width: 90%;
   animation: PokeMooveImg 2s ease-in-out infinite;
   filter: drop-shadow(25px -5px 8px #000);
 }
+
 @keyframes PokeMooveImg {
   0% {
     transform: translateY(-10%);
@@ -212,7 +216,6 @@ header .Active {
     transform: translateY(-10%);
   }
 }
-
 .scrollBarContainer {
   position: fixed;
   top: 15%;
@@ -253,8 +256,30 @@ header .Active {
   height: 100vh;
   background: #7eb9ed;
 }
-.PokePage .currentPokemon {
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+.PokePage .information_container {
+  display: flex;
+  align-items: center;
+}
+.PokePage .information_container .vignette {
+  background: #59b4e8;
+  width: 100px;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.PokePage .information_container .information {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.PokePage .information_container .type {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.PokePage .information_container .type p {
+  margin: 0 5px;
+}
+.PokePage .information_container .type img {
+  width: 40px;
 }/*# sourceMappingURL=style.css.map */

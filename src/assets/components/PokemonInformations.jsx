@@ -27,13 +27,16 @@ export default function PokemonInformations({
             <button onClick={() => setShiny(true)}>Shiny</button>
           </p>
         )}
+        <div className="currentPokemon">
+          <img
+            src={shiny ? PokemonImgShiny : PokemonImgRegular}
+            alt={`image ${PokemonName}`}
+          />
+        </div>
         <Evolutions
           PreEvolutions={PreEvolutions}
           NextEvolutions={NextEvolutions}
           shiny={shiny}
-          PokemonImgShiny={PokemonImgShiny}
-          PokemonImgRegular={PokemonImgRegular}
-          PokemonName={PokemonName}
         />
         <p>Taille : {PokemonHeight} </p>
         <p>Catégorie : {PokemonCategory} </p>

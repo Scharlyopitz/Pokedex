@@ -181,7 +181,8 @@ header .Active {
   filter: drop-shadow(25px -5px 8px #000);
 }
 
-.demoPokemon {
+.demoPokemon,
+.currentPokemon {
   position: fixed;
   display: flex;
   align-items: center;
@@ -194,7 +195,8 @@ header .Active {
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.36);
   background: repeating-linear-gradient(#ffffff, #ffffff 40px, #cae4ee 40px, #cae4ee 50px);
 }
-.demoPokemon img {
+.demoPokemon img,
+.currentPokemon img {
   width: 80%;
   animation: PokeMooveImg 2s ease-in-out infinite;
   filter: drop-shadow(25px -5px 8px #000);
@@ -250,4 +252,9 @@ header .Active {
   width: 100vw;
   height: 100vh;
   background: #7eb9ed;
+}
+.PokePage .currentPokemon {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */

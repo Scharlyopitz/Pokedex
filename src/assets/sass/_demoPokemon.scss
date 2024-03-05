@@ -10,11 +10,9 @@
   border: 20px solid $Yellow;
   background: repeating-linear-gradient(
     $White,
-    $White 10px,
-    $BlackOpacity 10px,
-    $BlackOpacity 15px,
-    $White 10px,
-    $White 50px
+    $White 20px,
+    $BlackOpacity 20px,
+    $BlackOpacity 25px
   );
 
   img {

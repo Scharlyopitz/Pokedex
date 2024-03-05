@@ -16,7 +16,9 @@ export default function ScrollBar() {
   return (
     <div className="scrollBarContainer">
       <div className="scrollBar">
-        <div className="scrollBtn" style={{ height: `${Percent}%` }}></div>
+        <div className="scrollBarFilter">
+          <div className="scrollBtn" style={{ height: `${Percent}%` }}></div>
+        </div>
       </div>
     </div>
   );

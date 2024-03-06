@@ -30,77 +30,85 @@ export default function PokemonInformations({
           />
         </div>
         <div className="informations">
-          <div className="information">
-            <h1>
-              N° {PokemonId} {PokemonName}
-            </h1>
-            {PokemonImgShiny && (
-              <div className="buttons">
-                <button
-                  className={`Normal ${activeNormal && "Active"}`}
-                  onClick={() => {
-                    setShiny(false),
-                      setActiveShiny(false),
-                      setActiveNormal(true);
-                  }}
-                >
-                  NORMAL
-                </button>
-                <button
-                  className={`Shiny ${activeShiny && "Active"}`}
-                  onClick={() => {
-                    setShiny(true),
-                      setActiveNormal(false),
-                      setActiveShiny(true);
-                  }}
-                >
-                  SHINY
-                </button>
+          <div className="firstSection">
+            <div className="information Orange">
+              <div>
+                <h1>
+                  N° {PokemonId} {PokemonName}
+                </h1>
               </div>
-            )}
-          </div>
+              <div>
+                {PokemonImgShiny && (
+                  <div className="buttons">
+                    <button
+                      className={`Normal ${activeNormal && "Active"}`}
+                      onClick={() => {
+                        setShiny(false),
+                          setActiveShiny(false),
+                          setActiveNormal(true);
+                      }}
+                    >
+                      NORMAL
+                    </button>
+                    <button
+                      className={`Shiny ${activeShiny && "Active"}`}
+                      onClick={() => {
+                        setShiny(true),
+                          setActiveNormal(false),
+                          setActiveShiny(true);
+                      }}
+                    >
+                      SHINY
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
 
-          <p className="Beige">{PokemonCategory} </p>
-          <div className="blueLight">
-            <div className="information">
-              <p className="vignette">Type</p>
-              {poke.types?.map((type, idx) => (
-                <div key={idx} className="type">
-                  <img src={type.image} alt={type.name} />
-                  <p>{type.name.toUpperCase()}</p>
-                </div>
-              ))}
-            </div>
-            <div className="information">
-              <p className="vignette">Taille</p> {PokemonHeight}{" "}
-            </div>
-            <div className="information">
-              <p className="vignette">Poids</p> {PokemonWeight}
-            </div>
-            <div className="information">
-              <p className="vignette">Talent(s)</p>
-              <div className="talents">
-                {poke.talents?.map((talent, idx) => (
-                  <div key={idx}>
-                    <p>{talent.name}</p>
+            <p className="Beige">{PokemonCategory} </p>
+            <div className="blueLight">
+              <div className="information">
+                <p className="vignette">Type</p>
+                {poke.types?.map((type, idx) => (
+                  <div key={idx} className="type">
+                    <img src={type.image} alt={type.name} />
+                    <p>{type.name.toUpperCase()}</p>
                   </div>
                 ))}
               </div>
+              <div className="information">
+                <p className="vignette">Taille</p> {PokemonHeight}{" "}
+              </div>
+              <div className="information">
+                <p className="vignette">Poids</p> {PokemonWeight}
+              </div>
+              <div className="information">
+                <p className="vignette">Talent(s)</p>
+                <div className="talents">
+                  {poke.talents?.map((talent, idx) => (
+                    <div key={idx}>
+                      <p>\{talent.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-          <div className="Pink">Evolution</div>
-          {poke.evolution ? (
-            <Evolutions
-              PreEvolutions={PreEvolutions}
-              NextEvolutions={NextEvolutions}
-              PokemonMegaEvo={PokemonMegaEvo}
-              shiny={shiny}
-            />
-          ) : (
-            <div className="evolution Beige">
-              <p>Pas d'évolution pour ce Pokémon</p>
-            </div>
-          )}
+          <div className="evolutionSection">
+            <div className="Pink">Evolution</div>
+            {poke.evolution ? (
+              <Evolutions
+                PreEvolutions={PreEvolutions}
+                NextEvolutions={NextEvolutions}
+                PokemonMegaEvo={PokemonMegaEvo}
+                shiny={shiny}
+              />
+            ) : (
+              <div className="evolution Beige">
+                <p>Pas d'évolution pour ce Pokémon</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

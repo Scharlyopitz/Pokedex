@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 export default function NextEvolution({ NextEvolutions, shiny }) {
@@ -8,7 +6,6 @@ export default function NextEvolution({ NextEvolutions, shiny }) {
       {NextEvolutions?.map((NextEvolution, idx) => (
         <div key={idx} className="nextEvolution">
           <div>
-            <FontAwesomeIcon icon={faChevronRight} />
             <Link to={`/PokemonStats/${NextEvolution.name.fr}`}>
               <img
                 src={
@@ -20,8 +17,9 @@ export default function NextEvolution({ NextEvolutions, shiny }) {
               />
             </Link>
           </div>
-          <p>N° {NextEvolution.pokedex_id}</p>
-          <p>{NextEvolution.name.fr}</p>
+          <p>
+            N° {NextEvolution.pokedex_id} {NextEvolution.name.fr}
+          </p>
         </div>
       ))}
     </>

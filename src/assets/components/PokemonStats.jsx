@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import PokemonInformations from "./PokemonInformations";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function PokemonStats({ pokemons }) {
   const { name } = useParams();
@@ -59,8 +57,8 @@ export default function PokemonStats({ pokemons }) {
 function BackHomeBtn() {
   return (
     <>
-      <Link to={"/"}>
-        <FontAwesomeIcon icon={faArrowLeft} style={{ color: "#ffffff" }} />
+      <Link className="Back" to={"/"}>
+        RETOUR
       </Link>
     </>
   );

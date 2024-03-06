@@ -5,6 +5,7 @@ $Pink: #e87cc6;
 $Blue: #7eb9ed;
 $BlueLight: #bce6f8;
 $Yellow: hsl(52, 96%, 65%);
+$Orange: #f18a34;
 $OrangeLight: #f3dc9b;
 $White: #ffffff;
 $Beige: #e7dbb7;
@@ -18,7 +19,7 @@ $Grey: #4b4b4b;
 $Background: #34495e;
 $BackgroundBis: #2c3e50;
 $PokemonBackground: #fde9ad;
-$PokemonBackgroundHovered: #f18a34;
+$PokemonBackgroundHovered: $Orange;
 $HomeBackground1: linear-gradient(
   0deg,
   rgba(111, 148, 224, 1) 0%,

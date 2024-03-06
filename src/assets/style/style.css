@@ -251,22 +251,36 @@ header .Active {
 }
 
 .PokePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background: #7eb9ed;
   color: #000000;
 }
+.PokePage,
+.PokePage button {
+  font-size: 30px;
+}
 .PokePage .information_container {
   display: flex;
-  align-items: center;
   border-bottom: 5px solid #f3dc9b;
   border-top: 5px solid #f3dc9b;
   background: repeating-linear-gradient(rgba(227, 155, 61, 0.6117647059), rgba(227, 155, 61, 0.6117647059) 5px, rgba(243, 220, 155, 0.5764705882) 5px, rgba(243, 220, 155, 0.5764705882) 8px);
   padding: 15px 0 15px 10px;
 }
 .PokePage .information_container .blueLight {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  justify-content: space-between;
   background: #bce6f8;
   padding: 10px;
+}
+.PokePage .information_container .Orange {
+  background: linear-gradient(90deg, rgba(111, 148, 224, 0) 0%, #f18a34 5%, #f18a34 95%, rgba(111, 148, 224, 0) 100%);
+  justify-content: space-evenly;
 }
 .PokePage .information_container .Beige {
   background: #e7dbb7;
@@ -275,14 +289,34 @@ header .Active {
   background: #e87cc6;
   color: #ffffff;
 }
-.PokePage .information_container .evolution {
+.PokePage .information_container .Beige,
+.PokePage .information_container .Pink {
+  padding: 10px 0;
+}
+.PokePage .information_container .evolutionSection {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.36);
+  margin: 10px;
+}
+.PokePage .information_container .evolutionSection .evolution {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  flex: auto;
 }
 .PokePage .information_container .informations {
   flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+.PokePage .information_container .informations .firstSection {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
 }
 .PokePage .information_container .informations .information {
   display: flex;
@@ -317,7 +351,7 @@ header .Active {
 }
 .PokePage .information_container .informations .information .vignette {
   background: #59b4e8;
-  width: 100px;
+  width: 200px;
   padding: 12px 0;
   border-radius: 5px;
   margin-right: 10px;
@@ -337,4 +371,21 @@ header .Active {
 .PokePage .information_container .informations .information .talents {
   display: flex;
   gap: 20px;
+}
+
+.Back {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #4b4b4b;
+  transition: 0.2s;
+}
+.Back:hover {
+  background: #ffffff;
+  border: 3px solid #4b4b4b;
+  color: #4b4b4b;
 }/*# sourceMappingURL=style.css.map */

@@ -1,20 +1,42 @@
 .PokePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background: $Blue;
   color: $Black;
 
+  &,
+  button {
+    font-size: 30px;
+  }
+
   .information_container {
     display: flex;
-    align-items: center;
     border-bottom: 5px solid $OrangeLight;
     border-top: 5px solid $OrangeLight;
     background: $BackgroundPokePage;
     padding: 15px 0 15px 10px;
 
     .blueLight {
+      display: flex;
+      flex-direction: column;
+      flex: auto;
+      justify-content: space-between;
       background: $BlueLight;
       padding: 10px;
+    }
+
+    .Orange {
+      background: linear-gradient(
+        90deg,
+        rgba(111, 148, 224, 0) 0%,
+        $Orange 5%,
+        $Orange 95%,
+        rgba(111, 148, 224, 0) 100%
+      );
+      justify-content: space-evenly;
     }
 
     .Beige {
@@ -26,15 +48,38 @@
       color: $White;
     }
 
-    .evolution {
+    .Beige,
+    .Pink {
+      padding: 10px 0;
+    }
+
+    .evolutionSection {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 400px;
+      flex-direction: column;
+      flex: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 36%);
+      margin: 10px;
+
+      .evolution {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: auto;
+      }
     }
 
     .informations {
       flex: auto;
+      display: flex;
+      flex-direction: column;
+
+      .firstSection {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+      }
       .information {
         display: flex;
         align-items: center;
@@ -73,7 +118,7 @@
 
         .vignette {
           background: $Vignette;
-          width: 100px;
+          width: 200px;
           padding: 12px 0;
           border-radius: 5px;
           margin-right: 10px;

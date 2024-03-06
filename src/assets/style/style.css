@@ -191,7 +191,7 @@ header .Active {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 800px;
+  min-width: 800px;
   height: 800px;
   border-radius: 40px;
   border: 20px solid hsl(52, 96%, 65%);

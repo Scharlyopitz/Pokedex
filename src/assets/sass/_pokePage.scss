@@ -10,10 +10,11 @@
     border-bottom: 5px solid $OrangeLight;
     border-top: 5px solid $OrangeLight;
     background: $BackgroundPokePage;
-    padding: 15px 10px;
+    padding: 15px 0 15px 10px;
 
     .blueLight {
       background: $BlueLight;
+      padding: 10px;
     }
 
     .Beige {
@@ -91,6 +92,11 @@
           img {
             width: 40px;
           }
+        }
+
+        .talents {
+          display: flex;
+          gap: 20px;
         }
       }
     }

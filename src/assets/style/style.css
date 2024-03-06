@@ -196,7 +196,7 @@ header .Active {
   border-radius: 40px;
   border: 20px solid hsl(52, 96%, 65%);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.36);
-  background: repeating-linear-gradient(#ffffff, #ffffff 40px, #cae4ee 40px, #cae4ee 50px);
+  background: repeating-linear-gradient(#ffffff, #ffffff 20px, #cae4ee 20px, #cae4ee 30px);
 }
 .demoPokemon img,
 .currentPokemon img {
@@ -262,10 +262,11 @@ header .Active {
   border-bottom: 5px solid #f3dc9b;
   border-top: 5px solid #f3dc9b;
   background: repeating-linear-gradient(rgba(227, 155, 61, 0.6117647059), rgba(227, 155, 61, 0.6117647059) 5px, rgba(243, 220, 155, 0.5764705882) 5px, rgba(243, 220, 155, 0.5764705882) 8px);
-  padding: 15px 10px;
+  padding: 15px 0 15px 10px;
 }
 .PokePage .information_container .blueLight {
   background: #bce6f8;
+  padding: 10px;
 }
 .PokePage .information_container .Beige {
   background: #e7dbb7;
@@ -332,4 +333,8 @@ header .Active {
 }
 .PokePage .information_container .informations .information .type img {
   width: 40px;
+}
+.PokePage .information_container .informations .information .talents {
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */

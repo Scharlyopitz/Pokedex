@@ -79,11 +79,13 @@ export default function PokemonInformations({
             </div>
             <div className="information">
               <p className="vignette">Talent(s)</p>
-              {poke.talents?.map((talent, idx) => (
-                <div key={idx}>
-                  <p>{talent.name}</p>
-                </div>
-              ))}
+              <div className="talents">
+                {poke.talents?.map((talent, idx) => (
+                  <div key={idx}>
+                    <p>{talent.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="Pink">Evolution</div>
@@ -96,7 +98,7 @@ export default function PokemonInformations({
             />
           ) : (
             <div className="evolution Beige">
-              <p>Pas d'évolution</p>
+              <p>Pas d'évolution pour ce Pokémon</p>
             </div>
           )}
         </div>

@@ -1,9 +1,13 @@
 // Basics
 
 $Red: #d73535;
+$Pink: #e87cc6;
 $Blue: #7eb9ed;
-$Yellow: #fbe44e;
+$BlueLight: #bce6f8;
+$Yellow: hsl(52, 96%, 65%);
+$OrangeLight: #f3dc9b;
 $White: #ffffff;
+$Beige: #e7dbb7;
 $LightLine: #cae4ee;
 $Black: #000000;
 $LightBlack: #292a2b;
@@ -39,3 +43,9 @@ $BorderBtnScrollBar: #8b1e0d;
 // Poke Page
 
 $Vignette: #59b4e8;
+$BackgroundPokePage: repeating-linear-gradient(
+  #e39b3d9c,
+  #e39b3d9c 5px,
+  #f3dc9b93 5px,
+  #f3dc9b93 8px
+);

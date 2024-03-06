@@ -4,7 +4,6 @@ import PokemonInformations from "./PokemonInformations";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import MegaEvolution from "./PokemonEvolutions/MegaEvolution";
 
 export default function PokemonStats({ pokemons }) {
   const { name } = useParams();
@@ -50,10 +49,6 @@ export default function PokemonStats({ pokemons }) {
             setShiny={setShiny}
             PreEvolutions={PreEvolutions}
             NextEvolutions={NextEvolutions}
-          />
-          <MegaEvolution
-            PokemonMegaEvolution={poke?.evolution?.mega}
-            shiny={shiny}
           />
         </div>
       )}

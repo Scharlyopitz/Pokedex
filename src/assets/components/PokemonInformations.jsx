@@ -15,6 +15,7 @@ export default function PokemonInformations({
   const PokemonHeight = poke?.height;
   const PokemonCategory = poke?.category;
   const PokemonImgShiny = poke?.sprites.shiny;
+  const PokemonMegaEvo = poke?.evolution?.mega;
 
   const [activeNormal, setActiveNormal] = useState(true);
   const [activeShiny, setActiveShiny] = useState(false);
@@ -58,31 +59,46 @@ export default function PokemonInformations({
               </div>
             )}
           </div>
-          {/* <Evolutions
-          PreEvolutions={PreEvolutions}
-          NextEvolutions={NextEvolutions}
-          shiny={shiny}
-        /> */}
-          Talent(s) :
-          {poke.talents?.map((talent, idx) => (
-            <p key={idx}>{talent.name}</p>
-          ))}
-          <p>{PokemonCategory} </p>
-          <div className="information">
-            <p className="vignette">Type</p>
-            {poke.types?.map((type, idx) => (
-              <div key={idx} className="type">
-                <img src={type.image} alt={type.name} />
-                <p>{type.name.toUpperCase()}</p>
-              </div>
-            ))}
+
+          <p className="Beige">{PokemonCategory} </p>
+          <div className="blueLight">
+            <div className="information">
+              <p className="vignette">Type</p>
+              {poke.types?.map((type, idx) => (
+                <div key={idx} className="type">
+                  <img src={type.image} alt={type.name} />
+                  <p>{type.name.toUpperCase()}</p>
+                </div>
+              ))}
+            </div>
+            <div className="information">
+              <p className="vignette">Taille</p> {PokemonHeight}{" "}
+            </div>
+            <div className="information">
+              <p className="vignette">Poids</p> {PokemonWeight}
+            </div>
+            <div className="information">
+              <p className="vignette">Talent(s)</p>
+              {poke.talents?.map((talent, idx) => (
+                <div key={idx}>
+                  <p>{talent.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="information">
-            <p className="vignette">Taille</p> {PokemonHeight}{" "}
-          </div>
-          <div className="information">
-            <p className="vignette">Poids</p> {PokemonWeight}
-          </div>
+          <div className="Pink">Evolution</div>
+          {poke.evolution ? (
+            <Evolutions
+              PreEvolutions={PreEvolutions}
+              NextEvolutions={NextEvolutions}
+              PokemonMegaEvo={PokemonMegaEvo}
+              shiny={shiny}
+            />
+          ) : (
+            <div className="evolution Beige">
+              <p>Pas d'évolution</p>
+            </div>
+          )}
         </div>
       </div>
     </>

@@ -2,16 +2,41 @@
   width: 100vw;
   height: 100vh;
   background: $Blue;
+  color: $Black;
 
   .information_container {
     display: flex;
     align-items: center;
+    border-bottom: 5px solid $OrangeLight;
+    border-top: 5px solid $OrangeLight;
+    background: $BackgroundPokePage;
+    padding: 15px 10px;
+
+    .blueLight {
+      background: $BlueLight;
+    }
+
+    .Beige {
+      background: $Beige;
+    }
+
+    .Pink {
+      background: $Pink;
+      color: $White;
+    }
+
+    .evolution {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+    }
 
     .informations {
+      flex: auto;
       .information {
         display: flex;
         align-items: center;
-        margin: 5px 0;
 
         .buttons {
           margin: 0 10px;
@@ -51,6 +76,7 @@
           padding: 12px 0;
           border-radius: 5px;
           margin-right: 10px;
+          color: $White;
         }
 
         .type {

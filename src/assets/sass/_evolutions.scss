@@ -1,11 +1,11 @@
 .evolutions {
   display: flex;
+  height: 400px;
   justify-content: center;
+  align-items: center;
 
-  .preEvolution img,
-  .nextEvolution img {
+  img {
     width: 60%;
-    height: 100%;
   }
 
   .preEvolution,

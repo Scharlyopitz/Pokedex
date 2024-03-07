@@ -253,7 +253,8 @@ header .Active {
 .PokePage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background: #7eb9ed;
@@ -269,6 +270,7 @@ header .Active {
   border-top: 5px solid #f3dc9b;
   background: repeating-linear-gradient(rgba(227, 155, 61, 0.6117647059), rgba(227, 155, 61, 0.6117647059) 5px, rgba(243, 220, 155, 0.5764705882) 5px, rgba(243, 220, 155, 0.5764705882) 8px);
   padding: 15px 0 15px 10px;
+  width: 100%;
 }
 .PokePage .information_container .blueLight {
   display: flex;
@@ -374,10 +376,6 @@ header .Active {
 }
 
 .Back {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
   border: 3px solid #ffffff;
   padding: 10px 15px;
   border-radius: 10px;

@@ -99,10 +99,10 @@
 
           .Shiny {
             color: #dd2d51;
-            border: 2px solid #eb859a;
+            border: 2px solid $Red;
 
             &.Active {
-              border: 4px solid #eb859a;
+              border: 4px solid $Red;
             }
           }
 

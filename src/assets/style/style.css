@@ -336,10 +336,10 @@ header .Active {
 }
 .PokePage .information_container .informations .information .buttons .Shiny {
   color: #dd2d51;
-  border: 2px solid #eb859a;
+  border: 2px solid #d73535;
 }
 .PokePage .information_container .informations .information .buttons .Shiny.Active {
-  border: 4px solid #eb859a;
+  border: 4px solid #d73535;
 }
 .PokePage .information_container .informations .information .buttons .Normal,
 .PokePage .information_container .informations .information .buttons .Shiny {

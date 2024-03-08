@@ -37,32 +37,31 @@ export default function PokemonInformations({
                   N° {PokemonId} {PokemonName}
                 </h1>
               </div>
-              <div>
-                {PokemonImgShiny && (
-                  <div className="buttons">
-                    <button
-                      className={`Normal ${activeNormal && "Active"}`}
-                      onClick={() => {
-                        setShiny(false),
-                          setActiveShiny(false),
-                          setActiveNormal(true);
-                      }}
-                    >
-                      NORMAL
-                    </button>
-                    <button
-                      className={`Shiny ${activeShiny && "Active"}`}
-                      onClick={() => {
-                        setShiny(true),
-                          setActiveNormal(false),
-                          setActiveShiny(true);
-                      }}
-                    >
-                      SHINY
-                    </button>
-                  </div>
-                )}
-              </div>
+
+              {PokemonImgShiny && (
+                <div className="buttons">
+                  <button
+                    className={`Normal ${activeNormal && "Active"}`}
+                    onClick={() => {
+                      setShiny(false),
+                        setActiveShiny(false),
+                        setActiveNormal(true);
+                    }}
+                  >
+                    NORMAL
+                  </button>
+                  <button
+                    className={`Shiny ${activeShiny && "Active"}`}
+                    onClick={() => {
+                      setShiny(true),
+                        setActiveNormal(false),
+                        setActiveShiny(true);
+                    }}
+                  >
+                    SHINY
+                  </button>
+                </div>
+              )}
             </div>
 
             <p className="Beige">{PokemonCategory} </p>

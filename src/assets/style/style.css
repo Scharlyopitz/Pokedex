@@ -164,12 +164,13 @@ header .Active {
 
 .evolutions {
   display: flex;
-  height: 400px;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  gap: 10px;
 }
 .evolutions img {
-  width: 60%;
+  width: 230px;
 }
 .evolutions .preEvolution,
 .evolutions .nextEvolution {
@@ -177,8 +178,23 @@ header .Active {
   flex-direction: column;
   justify-content: end;
 }
+.evolutions .evolutionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 73px 1px #b69a48;
+  width: 100%;
+}
+.evolutions .evolutionContainer .evo {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
 .evolutions .currentPokemon {
-  filter: drop-shadow(25px -5px 8px #000);
+  filter: drop-shadow(25px -5px 8px #000000);
 }
 
 .demoPokemon {
@@ -294,7 +310,7 @@ header .Active {
 }
 .PokePage .information_container .Beige,
 .PokePage .information_container .Pink {
-  padding: 10px 0;
+  padding: 10px;
 }
 .PokePage .information_container .evolutionSection {
   display: flex;

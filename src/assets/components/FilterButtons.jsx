@@ -1,36 +1,29 @@
 import allTypes from "../Types/Types.json";
 
-export default function FilterButtons({ setPokemonCategory, pokemonCategory }) {
+export default function FilterButtons({ setPokemonCategory }) {
   const getPokemonType = (e) => {
-    setPokemonCategory(e.target.dataset.type);
+    setPokemonCategory(e.target.value);
   };
 
   return (
     <div className="btn-container">
-      {allTypes.map((type, idx) => {
-        return (
-          <button
-            className={pokemonCategory === `${type.type}` ? "Active" : null}
-            data-type={type.type}
-            onClick={(e) => {
-              getPokemonType(e);
-            }}
-            style={{ border: `2px solid ${type.color.border}` }}
-            key={idx}
-          >
-            {type.type}
-          </button>
-        );
-      })}
-      <button
-        data-type="All"
-        onClick={(e) => {
+      <select
+        onChange={(e) => {
           getPokemonType(e);
         }}
-        className={`Tout ${pokemonCategory !== `All` ? null : "Active"}`}
+        name="pets"
+        id="pet-select"
       >
-        Tout
-      </button>
+        <option value="All">Tout</option>
+
+        {allTypes.map((type, idx) => {
+          return (
+            <option key={idx} value={type.type}>
+              {type.type}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 }

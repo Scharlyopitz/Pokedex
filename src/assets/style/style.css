@@ -29,7 +29,7 @@ body a {
 }
 
 main {
-  padding: 0 10%;
+  padding: 0 10% 0 5%;
 }
 
 .backGround {
@@ -123,30 +123,50 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 10px 0;
   display: flex;
   align-items: center;
   background-color: #6188ff;
   border-bottom: 8px solid #292a2b;
   display: flex;
   justify-content: space-between;
+  padding-left: 5%;
+}
+header input::-moz-placeholder {
+  font-size: 30px;
+  color: #ffffff;
+}
+header,
+header select,
+header input,
+header input::placeholder {
+  font-size: 30px;
+  color: #ffffff;
 }
 header div {
   display: flex;
 }
 header input {
   background: no-repeat;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  padding: 10px;
-  color: #000000;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  padding: 10px 0;
   outline: none;
+  caret-color: #ffffff;
+  width: 300px;
+  transition: 0.2s;
+}
+header input:focus {
+  width: 400px;
 }
 header input::-moz-placeholder {
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6117647059);
 }
 header input::placeholder {
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6117647059);
+}
+header .search {
+  flex: auto;
+  gap: 50px;
 }
 header .btn-container {
   display: flex;
@@ -156,7 +176,6 @@ header .btn-container {
   width: 30%;
 }
 header .btn-container select {
-  color: #ffffff;
   text-align: center;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -166,8 +185,8 @@ header .btn-container select {
   box-shadow: -3px 3px 5px -1px rgba(0, 0, 0, 0.75) inset;
   width: 70%;
   padding: 5px 10px;
+  margin: 20px;
   border-radius: 20px;
-  font-size: 30px;
   transition: 0.2s;
 }
 header .btn-container select:hover {

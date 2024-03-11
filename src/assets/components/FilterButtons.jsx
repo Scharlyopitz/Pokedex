@@ -1,6 +1,6 @@
 import allTypes from "../Types/Types.json";
 
-export default function FilterButtons({ setPokemonCategory }) {
+export default function FilterButtons({ setPokemonCategory, pokemonCategory }) {
   const getPokemonType = (e) => {
     setPokemonCategory(e.target.value);
   };
@@ -11,8 +11,7 @@ export default function FilterButtons({ setPokemonCategory }) {
         onChange={(e) => {
           getPokemonType(e);
         }}
-        name="pets"
-        id="pet-select"
+        value={pokemonCategory}
       >
         <option value="All">Tout</option>
 

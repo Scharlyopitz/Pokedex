@@ -3,13 +3,21 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 10px 0;
   display: flex;
   align-items: center;
   background-color: $Header;
   border-bottom: 8px solid $LightBlack;
   display: flex;
   justify-content: space-between;
+  padding-left: 5%;
+
+  &,
+  select,
+  input,
+  input::placeholder {
+    font-size: 30px;
+    color: $White;
+  }
 
   div {
     display: flex;
@@ -17,15 +25,26 @@ header {
 
   input {
     background: no-repeat;
-    border: 2px solid $Black;
-    border-radius: 5px;
-    padding: 10px;
-    color: $Black;
+    border: none;
+    border-bottom: 2px solid $White;
+    padding: 10px 0;
     outline: none;
+    caret-color: $White;
+    width: 300px;
+    transition: 0.2s;
+
+    &:focus {
+      width: 400px;
+    }
 
     &::placeholder {
-      font-size: 12px;
+      color: #ffffff9c;
     }
+  }
+
+  .search {
+    flex: auto;
+    gap: 50px;
   }
 
   .btn-container {
@@ -36,7 +55,6 @@ header {
     width: 30%;
 
     select {
-      color: $White;
       text-align: center;
       appearance: none;
       outline: none;
@@ -44,8 +62,8 @@ header {
       box-shadow: -3px 3px 5px -1px rgba(0, 0, 0, 0.75) inset;
       width: 70%;
       padding: 5px 10px;
+      margin: 20px;
       border-radius: 20px;
-      font-size: 30px;
       transition: 0.2s;
 
       &:hover {

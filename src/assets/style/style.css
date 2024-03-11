@@ -15,7 +15,8 @@ body::-webkit-scrollbar {
 }
 body,
 body button,
-body input {
+body input,
+body select {
   font-family: "VT323", monospace;
 }
 body img,
@@ -122,11 +123,16 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0 5%;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   background-color: #6188ff;
   border-bottom: 8px solid #292a2b;
+  display: flex;
+  justify-content: space-between;
+}
+header div {
+  display: flex;
 }
 header input {
   background: no-repeat;
@@ -142,24 +148,39 @@ header input::-moz-placeholder {
 header input::placeholder {
   font-size: 12px;
 }
-header button {
-  padding: 15px 25px;
-  border-radius: 30px;
-  margin: 5px;
-  font-size: 25px;
+header .btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #70a4f1;
+  width: 30%;
+}
+header .btn-container select {
   color: #ffffff;
-  background: #2c3e50;
+  text-align: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  background: #4379ca;
+  box-shadow: -3px 3px 5px -1px rgba(0, 0, 0, 0.75) inset;
+  width: 70%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 30px;
   transition: 0.2s;
 }
-header button:hover {
+header .btn-container select:hover {
   cursor: pointer;
-  background: #1d2732;
+  background: #3c6bb2;
 }
-header .Tout {
-  border: 2px solid #000000;
-}
-header .Active {
-  background: #1d2732;
+header .btn-container select option {
+  background: transparent;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 6px solid rgba(255, 255, 255, 0.16);
 }
 
 .evolutions {

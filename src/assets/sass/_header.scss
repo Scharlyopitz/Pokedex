@@ -3,11 +3,17 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0 5%;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   background-color: $Header;
   border-bottom: 8px solid $LightBlack;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+  }
 
   input {
     background: no-repeat;
@@ -20,31 +26,41 @@ header {
     &::placeholder {
       font-size: 12px;
     }
-
-    // &:focus {
-    //   border: 3px solid $Black;
-    // }
   }
 
-  button {
-    padding: 15px 25px;
-    border-radius: 30px;
-    margin: 5px;
-    font-size: 25px;
-    color: $White;
-    background: $BackgroundBis;
-    transition: 0.2s;
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #70a4f1;
+    width: 30%;
 
-    &:hover {
-      cursor: pointer;
-      background: $Active;
+    select {
+      color: $White;
+      text-align: center;
+      appearance: none;
+      outline: none;
+      background: #4379ca;
+      box-shadow: -3px 3px 5px -1px rgba(0, 0, 0, 0.75) inset;
+      width: 70%;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 30px;
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background: #3c6bb2;
+      }
+
+      option {
+        background: transparent;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 6px solid rgba(255, 255, 255, 0.16);
+      }
     }
-  }
-  .Tout {
-    border: 2px solid $Black;
-  }
-
-  .Active {
-    background: $Active;
   }
 }

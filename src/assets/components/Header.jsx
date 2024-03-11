@@ -8,7 +8,7 @@ export default function Header({
 }) {
   return (
     <header>
-      <h1>Pokedex</h1>
+      <h1>POKEDEX</h1>
       <input
         value={searchPokemon}
         type="text"

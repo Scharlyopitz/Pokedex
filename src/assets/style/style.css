@@ -403,4 +403,43 @@ header .Active {
   background: #ffffff;
   border: 3px solid #4b4b4b;
   color: #4b4b4b;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  background: linear-gradient(0deg, rgb(111, 148, 224) 0%, rgb(56, 78, 159) 45%, rgb(56, 78, 159) 55%, rgb(111, 148, 224) 100%);
+}
+.error a {
+  padding: 10px 25px;
+  font-size: 2vw;
+}
+.error,
+.error a {
+  text-transform: uppercase;
+}
+.error_txt h1 {
+  font-size: 10vw;
+}
+.error_txt img {
+  width: 6vw;
+  animation: pokeTurn 10s linear infinite;
+}
+@keyframes pokeTurn {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.error p {
+  font-size: 3vw;
 }/*# sourceMappingURL=style.css.map */

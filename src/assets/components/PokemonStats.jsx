@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import PokemonInformations from "./PokemonInformations";
+import Error from "./Error";
 import { Link } from "react-router-dom";
 
 export default function PokemonStats({ pokemons }) {
@@ -35,6 +36,10 @@ export default function PokemonStats({ pokemons }) {
         pokemon.name.fr === pokemonNextEvoName[0] ||
         pokemon.name.fr === pokemonNextEvoName[1]
     );
+
+  if (!poke) {
+    return <Error />;
+  }
 
   return (
     <>

@@ -1,0 +1,46 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  background: $HomeBackground1;
+
+  a {
+    padding: 10px 25px;
+    font-size: 2vw;
+  }
+
+  &,
+  a {
+    text-transform: uppercase;
+  }
+
+  &_txt {
+    & h1 {
+      font-size: 10vw;
+    }
+
+    img {
+      width: 6vw;
+      animation: pokeTurn 10s linear infinite;
+    }
+
+    @keyframes pokeTurn {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  p {
+    font-size: 3vw;
+  }
+}

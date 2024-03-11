@@ -1,6 +1,7 @@
 import Home from "./assets/components/Home";
 import { Route, Routes } from "react-router";
 import PokemonStats from "./assets/components/PokemonStats";
+import Error from "./assets/components/Error";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         path="/PokemonStats/:name"
         element={<PokemonStats pokemons={pokemons} />}
       />
+      <Route path="*" element={<Error />} />
     </Routes>
   );
 }

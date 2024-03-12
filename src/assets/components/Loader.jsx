@@ -1,11 +1,9 @@
-import { HashLoader } from "react-spinners";
+import PokeBall from "/pokeball.png";
 
 export default function Loader() {
   return (
-    <HashLoader
-      className="Loader"
-      color="#36d7b7"
-      style={{ transform: "translate(-50%,-50%)" }}
-    />
+    <div className="Loader">
+      <img src={PokeBall} alt="logo Pokeball" />
+    </div>
   );
 }

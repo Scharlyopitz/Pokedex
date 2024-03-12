@@ -482,4 +482,23 @@ header .btn-container select option {
 }
 .error p {
   font-size: 3vw;
+}
+
+.Loader {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Loader img {
+  width: 12vw;
+  animation: LoaderAnimation 2s cubic-bezier(0.87, 0, 0.13, 1) infinite;
+}
+@keyframes LoaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
